@@ -2,19 +2,17 @@
 ![](https://img.shields.io/badge/PG-blue) ![](https://img.shields.io/badge/Subject-CVS-blue) <br/>
 ![](https://img.shields.io/badge/Lecture-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) 
 
-## CVS#10 - Firmware Update OTA
+## CVS#10 - AI-Powered Secure OTA Updates
 ![](https://img.shields.io/badge/Member-Mani_Shankar_Molleti-gold) <br/> 
 ![](https://img.shields.io/badge/SDG-TBD-darkgreen) <br/> 
 ![](https://img.shields.io/badge/Reviewed-TBD-brown) 
 
 ### Problem Statement
-The automotive industry's shift toward intelligent vehicles has increased dependence on electronic control units (ECUs) for safety, performance, and operational enhancements. Regular firmware updates are essential to maintain functionality, fix bugs, and improve system performance. Traditional physical update methods are costly, inefficient, and inconvenient for manufacturers and consumers.
+Modern vehicles rely heavily on Electronic Control Units (ECUs) to control essential functions such as engine performance, braking, infotainment, and safety systems. These ECUs require frequent firmware updates to fix software bugs, improve performance, and enhance cybersecurity. Traditionally, these updates are performed manually at service centers using wired connections, which is costly, time-consuming, and inefficient. As vehicle technology advances, manufacturers are shifting toward Over-the-Air (OTA) firmware updates, allowing vehicles to receive software updates remotely. However, implementing OTA updates at scale introduces several security and technical challenges that must be addressed.
 
-Firmware-Over-The-Air (FOTA) technology addresses these limitations by enabling remote updates, streamlining processes, and enhancing user experience. However, transitioning to FOTA introduces significant cybersecurity risks, including data tampering, unauthorized firmware access, replay attacks, and malware injection, which can jeopardize vehicle safety and functionality.
+One of the biggest concerns with OTA updates is cybersecurity risks. Hackers may exploit vulnerabilities in the update process to inject malicious firmware, potentially compromising vehicle safety. Additionally, unreliable network conditions can result in incomplete or corrupted updates, leading to ECU failures. Another major issue is legacy ECU compatibility, as older vehicle models may not support modern encryption protocols or high-speed data transmission, making secure OTA updates difficult to implement. These challenges necessitate a secure, efficient, and intelligent OTA update system that ensures vehicles receive updates safely and seamlessly.
 
-The cntral challenges is developing a lightweight, Secure fota protocol that ensure data integrity, authentication, confidentiality, and freshness while addressing the limited computational resources of ECUs and 
-the vulnerabilities of wireless communication.
-Arobust solution is critical to delivering safe, efficient, and reliable updates is the evolving landscape of intelligent vehicles.
+To address these challenges, this project proposes an AI-driven Secure OTA Firmware Update System, integrating Artificial Intelligence (AI) and Ethernet/IP-based Unified Diagnostic Services (UDS). AI enhances predictive maintenance by analyzing vehicle health data to determine the best time for updates while also identifying potential security threats in real time. End-to-end encryption and intrusion detection systems (IDS) protect the firmware from unauthorized modifications. By leveraging AI-powered diagnostics, secure encryption, and high-speed Ethernet/IP communication, this solution ensures safer, more efficient, and reliable OTA firmware updates, reducing downtime, improving cybersecurity, and enhancing overall vehicle performance.
 
 ---
 
