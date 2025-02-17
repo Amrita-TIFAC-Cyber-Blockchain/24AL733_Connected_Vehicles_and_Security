@@ -2,10 +2,10 @@
 ![](https://img.shields.io/badge/PG-blue) ![](https://img.shields.io/badge/Subject-CVS-blue) <br/>
 ![](https://img.shields.io/badge/Lecture-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) 
 
-## CVS#01 - Implementation of CAN and CAN-FD Communication Protocols with Secure Communication Channel
+## CVS#01 - Implementation of CAN-FD Communication Protocols with Secure Communication Channel
 ![](https://img.shields.io/badge/Member-Amit_Kumar_Nandi-gold) <br/> 
 ![](https://img.shields.io/badge/SDG-TBD-darkgreen) <br/> 
-![](https://img.shields.io/badge/Reviewed-TBD-brown) 
+![](https://img.shields.io/badge/Reviewed-17th_Feb_2025-brown) 
 
 ### Problem Statement
   In the Automotive domain, Controller Area Network (CAN) is one of the common and popular communication protocols, which is known for it’s simplicity and ease of implementation. It offers better data speed as compared to LIN. However, with the advancement of Automotive domain, more and more features are getting added, which requires the transfer of vast amounts of data collected through various sensors like RADAR, LIDAR, Ultrasonic Sensor, high-definition Cameras etc. To handle this enormous amount of data, a high-speed data transmission protocol is essential. The traditional CAN having data speed up to 1Mbps and payload of 8 bytes, is inefficient for handling the demands of modern ADAS applications. To accommodate this high-speed data, an improved version of classical CAN, known as Controller Area Network Flexible Data-Rate has been introduced which offers data speed of 10 Mbps with payload capacity of 64 bytes. 
