@@ -2,10 +2,10 @@
 ![](https://img.shields.io/badge/PG-blue) ![](https://img.shields.io/badge/Subject-CVS-blue) <br/>
 ![](https://img.shields.io/badge/Lecture-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) 
 
-## CVS#03 - IDS/IPS in Connected Vehicles
+## CVS#03 - IDS and IPS for CAN in Connected Vehicles
 ![](https://img.shields.io/badge/Member-Pratiksha_Mahalingpure-gold) <br/> 
 ![](https://img.shields.io/badge/SDG-TBD-darkgreen) <br/> 
-![](https://img.shields.io/badge/Reviewed-TBD-brown) 
+![](https://img.shields.io/badge/Reviewed-15th_Feb_2025-brown) 
 
 ### Problem Statement
 The increased connectivity in vehicles through different communication protocols like CAN, Ethernet, LIN, FlexRay, MOST introduces different cyber security attacks and raises concern regarding safety and security concerns.
