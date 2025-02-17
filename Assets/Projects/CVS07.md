@@ -7,7 +7,7 @@
 
 ![](https://img.shields.io/badge/Member-Shashank_R-gold) <br/>
 ![](https://img.shields.io/badge/SDG-TBD-darkgreen) <br/>
-![](https://img.shields.io/badge/Reviewed-TBD-brown)
+![](https://img.shields.io/badge/Reviewed-17th_Feb_2025-brown)
 
 ### Problem Statement
 
