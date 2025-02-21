@@ -101,9 +101,9 @@ Scalability & low latency for real-time applications.<br>
 ---
 
 ### References
-https://www.researchgate.net/publication/321375127_Cybersecurity_Attacks_in_Vehicle-to-Infrastructure_V2I_Applications_and_their_Prevention
-2.	https://ieeexplore.ieee.org/document/9071073
-3.	https://www.mdpi.com/2227-9091/10/5/91
-4.	https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/qtc2.12070
-5.	https://www.mdpi.com/2624-8921/5/4/86
-6.	https://onlinelibrary.wiley.com/doi/10.1155/2022/4280617
+1. https://www.researchgate.net/publication/321375127_Cybersecurity_Attacks_in_Vehicle-to-Infrastructure_V2I_Applications_and_their_Prevention
+2. https://ieeexplore.ieee.org/document/9071073
+3. https://www.mdpi.com/2227-9091/10/5/91
+4.https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/qtc2.12070
+5. https://www.mdpi.com/2624-8921/5/4/86
+6. https://onlinelibrary.wiley.com/doi/10.1155/2022/4280617
