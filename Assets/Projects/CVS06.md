@@ -26,58 +26,22 @@ The paper will dissect the role of Free-Space Optical Quantum Key Distribution i
 ### Proposed Work
 For now, to detect attacks like MITM and DDoS, QML would be the ideal solution. For prevention, which is the next step, QKD would be a better option, as other existing detection and prevention algorithms have vulnerabilities that can lead to attacks.  
 For example, in V2I communication, vehicles need to communicate with RSUs in real time and at high speed. In such scenarios, RSA and ECC are computationally intensive and take significant time to generate and verify keys, which is the core process of RSA and ECC. This delay can slow down real-time attack detection. In contrast, QKD and QML offer faster and more efficient security mechanisms.
-
-1. RSA (Rivest-Shamir-Adleman) – A widely used public-key cryptosystem but insecure against quantum attacks due to Shor’s algorithm.
-2. Diffie-Hellman – A key exchange protocol vulnerable to quantum computers, which can efficiently solve its discrete logarithm problem.
-3. ECC (Elliptic Curve Cryptography) – A public-key cryptosystem that is more efficient than RSA but still insecure against quantum attacks.
-4. AES (Advanced Encryption Standard) – A strong symmetric-key algorithm, but quantum attacks require larger key sizes for security.
-5. OTP (One-Time Pad) – A theoretically unbreakable encryption method if keys are truly random and used only once.
-6. Code-based Cryptography – Uses error-correcting codes for encryption; not yet broken by quantum algorithms.
-7. Hash-based Cryptography – Relies on cryptographic hash functions; secure against quantum attacks but has limited applications.
-8. Lattice-based Cryptography – Uses hard lattice problems for security; considered strong against quantum threats.
-9. Multivariate Cryptography – Uses polynomial equations for encryption; not yet broken by quantum computers.
-10. QKD (Quantum Key Distribution) – Uses quantum mechanics for secure key exchange, ensuring proven security against eavesdropping.
-
----
-
-### Implementation Details
-1. Problem Scope<br>
-Detect cybersecurity threats in V2I communication using Quantum Machine Learning (QML).<br>
-Threats Simulated: DDoS, Message Spoofing, Sybil Attacks.<br>
-Data Generation: OMNeT++ simulates normal and malicious V2I communication.<br>
-
-2. Feature Extraction<br>
-Extract packet frequency, size, source-destination pairs, and timing from OMNeT++ logs.<br>
-Normalize and preprocess data for QML training.<br>
-
-3. QML Model Training<br>
-Algorithms: QSVM for binary classification, QNN for multi-class detection.<br>
-Framework: Qiskit/PennyLane for quantum circuit-based training.<br>
-Evaluation: Accuracy, precision, recall, F1-score.<br>
-
-4. Role of OMNeT++<br>
-Simulates normal and attack traffic.<br>
-Provides packet-level logs for training data.<br>
-Integrates trained QML model for real-time threat detection at RSUs.<br>
-
-5. Detection Framework<br>
-Traffic Monitoring: RSUs collect V2I data.<br>
-Classification: QML model detects anomalies.<br>
-Response: Block threats, send alerts.<br>
-
-6. Performance Evaluation<br>
-Metrics: Detection accuracy, false positives, latency, Packet Delivery Ratio (PDR).<br>
-Comparison: QML vs. classical ML (SVM, Random Forest).<br>
-
-7. Tools & Resources<br>
-OMNeT++ (Simulation), Qiskit/PennyLane (QML), SUMO (Mobility), Python (Feature extraction & integration).<br>
-
-8. Expected Outcomes <br>
-High detection accuracy for cyber threats.<br>
-Scalability & low latency for real-time applications.<br>
-
+<p align="center">
+  <img src="../images/COMPARISON.png" width=400/>
+</p>
+1. RSA (Rivest-Shamir-Adleman) – A widely used public-key cryptosystem but insecure against quantum attacks due to Shor’s algorithm.<br>
+2. Diffie-Hellman – A key exchange protocol vulnerable to quantum computers, which can efficiently solve its discrete logarithm problem.<br>
+3. ECC (Elliptic Curve Cryptography) – A public-key cryptosystem that is more efficient than RSA but still insecure against quantum attacks.<br>
+4. AES (Advanced Encryption Standard) – A strong symmetric-key algorithm, but quantum attacks require larger key sizes for security.<br>
+5. OTP (One-Time Pad) – A theoretically unbreakable encryption method if keys are truly random and used only once.<br>
+6. Code-based Cryptography – Uses error-correcting codes for encryption; not yet broken by quantum algorithms.<br>
+7. Hash-based Cryptography – Relies on cryptographic hash functions; secure against quantum attacks but has limited applications.<br>
+8. Lattice-based Cryptography – Uses hard lattice problems for security; considered strong against quantum threats.<br>
+9. Multivariate Cryptography – Uses polynomial equations for encryption; not yet broken by quantum computers.<br>
+10. QKD (Quantum Key Distribution) – Uses quantum mechanics for secure key exchange, ensuring proven security against eavesdropping.<br>
 
 ---
+
 
 
 ### Tools:
