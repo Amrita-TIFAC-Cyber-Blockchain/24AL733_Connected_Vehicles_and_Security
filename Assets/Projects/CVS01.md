@@ -97,3 +97,5 @@ This project aligns with the following Sustainable Development Goals:
 3.	Farag Mohamed E.Lagnf, Subramaniam Ganesan , ‘Securing CAN FD by implementing AES-128, SHA256, and Message Counter based on FPGA’, IEEE International Conference on Electro Information Technology (EIT).
 4.	Jingyi Jia , Yujing Wu, Yinan Xu, ‘Intelligent Connected Vehicle CAN-FD Bus Network Security Protocol’, International Conference on Mobile Internet, Cloud Computing and Information Security (MICCIS).
 
+
+[Implementation of CAN-FD Communication Protocols with Secure Communication.pdf](https://github.com/user-attachments/files/18924349/Implementation.of.CAN-FD.Communication.Protocols.with.Secure.Communication.pdf)
