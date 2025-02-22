@@ -44,14 +44,14 @@ Cryptographic Components: Lightweight cryptography (ECC, AES) and hash-based int
 Protocol Stack: Implementation of key protocols such as HTTPS, MQTT, or CoAP for secure communication.
 #### Workflow Simulation
 ##### Network Design in CISCO Packet Tracer:
-Create a network model with end devices(HPC in an automotive vehicle), routers, and cloud servers.
-Configure secure communication channels using cryptographic protocols.
+Create a network model with end devices(HPC in an automotive vehicle), routers, and cloud servers.<br>
+Configure secure communication channels using cryptographic protocols.<br>
 
 ##### Authentication Flow:
-Step 1: Vehicle initiates authentication with the cloud server.
-Step 2: Cloud server verifies the vehicle’s identity using certificate-based authentication.
-Step 3: A session key is generated using symmetric cryptography for secure communication.
-Step 4: Data integrity is verified for every packet exchanged during the session.
+Step 1: Vehicle initiates authentication with the cloud server.<br>
+Step 2: Cloud server verifies the vehicle’s identity using certificate-based authentication.<br>
+Step 3: A session key is generated using symmetric cryptography for secure communication.<br>
+Step 4: Data integrity is verified for every packet exchanged during the session.<br>
 
 ---
 
@@ -70,8 +70,8 @@ By ensuring secure communication in cloud-based connected vehicle ecosystems, th
 ---
 
 ### References
-"IEEE Standard for Wireless Access in Vehicular Environments--Security Services for Applications and Management Messages," in IEEE Std 1609.2-2016 (Revision of IEEE Std 1609.2-2013) , vol., no., pp.1-240, 1 March 2016, doi: 10.1109/IEEESTD.2016.7426684.
-Hasan, S.S.U.; Ghani, A.; Daud, A.; Akbar, H.; Khan, M.F. A Review on Secure Authentication Mechanisms for Mobile Security. Sensors 2025, 25, 700. https://doi.org/10.3390/s25030700
-S. Mugunthan, V. Sureshkumar, P. Saravanan and R. Amin, "VAuth: Robust Lightweight Mutual Authentication Protocol Preserving User’s Anonymity for VANET With FPGA Implementation," in IEEE Transactions on Intelligent Transportation Systems, vol. 25, no. 12, pp. 21097-21106, Dec. 2024, doi: 10.1109/TITS.2024.3461838.
-D. Abbasinezhad-Mood and H. Ghaemi, "Dual-Signature Blockchain-Based Key Sharing Protocol for Secure V2V Communications in Multi-Domain IoV Environments," in IEEE Transactions on Intelligent Transportation Systems, vol. 25, no. 10, pp. 13407-13416, Oct. 2024, doi: 10.1109/TITS.2024.3410114.
-A. Aljumaili, H. Trabelsi, W. Jerbi and R. Hazim, "Implementing Cryptographic Mechanisms with IRS for Enhancing an Internet of Vehicles," 2024 IEEE 7th International Conference on Computer and Communication Engineering Technology (CCET), Beijing, China, 2024, pp. 185-194, doi: 10.1109/CCET62233.2024.10837706.
+[1] "IEEE Standard for Wireless Access in Vehicular Environments--Security Services for Applications and Management Messages," in IEEE Std 1609.2-2016 (Revision of IEEE Std 1609.2-2013) , vol., no., pp.1-240, 1 March 2016, doi: 10.1109/IEEESTD.2016.7426684.<br>
+[2] Hasan, S.S.U.; Ghani, A.; Daud, A.; Akbar, H.; Khan, M.F. A Review on Secure Authentication Mechanisms for Mobile Security. Sensors 2025, 25, 700. https://doi.org/10.3390/s25030700 <br>
+[3] S. Mugunthan, V. Sureshkumar, P. Saravanan and R. Amin, "VAuth: Robust Lightweight Mutual Authentication Protocol Preserving User’s Anonymity for VANET With FPGA Implementation," in IEEE Transactions on Intelligent Transportation Systems, vol. 25, no. 12, pp. 21097-21106, Dec. 2024, doi: 10.1109/TITS.2024.3461838.<br>
+[4] D. Abbasinezhad-Mood and H. Ghaemi, "Dual-Signature Blockchain-Based Key Sharing Protocol for Secure V2V Communications in Multi-Domain IoV Environments," in IEEE Transactions on Intelligent Transportation Systems, vol. 25, no. 10, pp. 13407-13416, Oct. 2024, doi: 10.1109/TITS.2024.3410114.<br>
+[5] A. Aljumaili, H. Trabelsi, W. Jerbi and R. Hazim, "Implementing Cryptographic Mechanisms with IRS for Enhancing an Internet of Vehicles," 2024 IEEE 7th International Conference on Computer and Communication Engineering Technology (CCET), Beijing, China, 2024, pp. 185-194, doi: 10.1109/CCET62233.2024.10837706.<br>
