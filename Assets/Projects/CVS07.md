@@ -181,13 +181,13 @@ The development and optimization of 5G-V2X systems rely heavily on advanced simu
 * Attack scenarios disrupt communication (e.g., fake DENM messages).
 
 <p align="center">
-  <img src="../Image/Data_Flow.png" width=400/>
+  <img src="../images/Data_Flow.png" width=400/>
 </p>
 
 #### Amrita Vishwa Vidyapeetham, Coimbatore area from OSM
 
 <p align="center">
-  <img src="../Image/ONX_img.png" width=400/>
+  <img src="../images/ONX_img.png" width=400/>
 </p>
 
 ---
