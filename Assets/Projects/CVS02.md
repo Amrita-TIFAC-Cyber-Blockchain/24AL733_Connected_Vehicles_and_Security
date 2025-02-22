@@ -52,7 +52,7 @@ Performance Evaluation:\
 Accuracy of IDS detection.\
 Latency impact of AES-128 encryption.\
 Response time to security threats.\
-This approach ensures a secure and resilient CAN-FD communication system, protecting against critical cyber threats.\
+This approach ensures a secure and resilient CAN-FD communication system, protecting against critical cyber threats.
 
 ---
 
@@ -74,12 +74,12 @@ Performance Evaluation and Testing: The effectiveness of the implemented securit
 This project aligns with:\
 SDG 9 - Industry, Innovation, and Infrastructure by strengthening automotive cybersecurity.\
 SDG 11 - Sustainable Cities and Communities by ensuring safer vehicle communication.\
-SDG 16 - Peace, Justice, and Strong Institutions by protecting automotive networks from cybercrime.\
+SDG 16 - Peace, Justice, and Strong Institutions by protecting automotive networks from cybercrime.
 
 ---
 
 ### References
 1. Addressing Vulnerabilities in CAN-FD: An Exploration and Security Enhancement Approach ;  by Naseeruddin Lodge, Nahush Tambe and Fareena Saqib
-Department of Electrical and Computer Engineering, University of North Carolina at Charlotte, Charlotte.\
-2. Enhancing In-Vehicle Networks with CAN-FD: A study of Protocol Improvements over Classical CAN; Dhanush M S; Ananthakrinshna T;  2024 International Conference on Electronics, Computing, Communication and Control Technology (ICECCC)\
+Department of Electrical and Computer Engineering, University of North Carolina at Charlotte, Charlotte.
+2. Enhancing In-Vehicle Networks with CAN-FD: A study of Protocol Improvements over Classical CAN; Dhanush M S; Ananthakrinshna T;  2024 International Conference on Electronics, Computing, Communication and Control Technology (ICECCC)
 3. Intelligent Connected Vehicle CAN-FD Bus Network Security Protocol; Jingyi Jia; Yihu Xu; Yujing Wu; Yinan Xu; Yiming Fan; Dandan Zhang; 2023 International Conference on Mobile Internet, Cloud Computing and Information Security (MICCIS)
