@@ -35,20 +35,33 @@ From the literature survey here are some methods used or can be addressed to ove
 ---
 
 ### Proposed Work
-
-
----
+This project focuses on three major security threats in CAN-FD networks:
+Message Tampering – Unauthorized modification of legitimate CAN-FD messages.
+Malicious Injection – The attacker injects fake messages into the CAN-FD network.
+Denial-of-Service (DoS) Attack – Overloading the CAN-FD network to disrupt communication.
+Each attack will be simulated, detected, and mitigated using MATLAB.
 
 ### Implementation Details
-
-
-
----
+To address the identified threats, MATLAB will be used to simulate the CAN-FD network, introduce attack scenarios, and implement security mechanisms. The project will be carried out in the following steps:
+CAN-FD Network Simulation: A simulated CAN-FD network will be created in MATLAB using the Vehicle Network Toolbox. This will involve setting up multiple Electronic Control Units (ECUs) communicating over a CAN-FD bus. The network will be designed to mimic real-world vehicle communication, with legitimate message exchanges between various ECUs.
+Message Tampering Attack Simulation: A normal CAN-FD message transmission scenario will be established. An attacker node will be introduced to intercept and modify legitimate messages before forwarding them. The system will then analyze the impact of these alterations on vehicle functionality.
+Detection and Prevention of Message Tampering: A real-time Intrusion Detection System (IDS) will be implemented to monitor message integrity. This will be achieved by comparing incoming messages with expected values. Cryptographic authentication techniques such as AES-128 encryption and HMAC verification will be employed to secure message transmissions and detect unauthorized modifications.
+Malicious Injection Attack Simulation: The system will generate normal CAN-FD messages and introduce an attacker node that injects unauthorized messages. This attack will test the vulnerability of the network to unauthorized command execution, such as false brake or acceleration signals.
+Detection and Prevention of Malicious Injection: ECU authentication mechanisms will be enforced using Message Authentication Codes (MACs). Messages from unauthorized sources will be filtered out, preventing false commands from affecting the system.
+Denial-of-Service (DoS) Attack Simulation: A flooding attack will be simulated, where an attacker node sends an excessive number of messages to overwhelm the CAN-FD bus. The effect of this attack on normal ECU communication and system response times will be analyzed.
+Detection and Prevention of DoS Attacks: Rate-monitoring techniques will be implemented to detect abnormal traffic patterns. Firewall-based packet filtering will be used to limit excessive message transmission. Additionally, SYN cookies will be applied to prevent repeated malicious message floods.
+Performance Evaluation and Testing: The effectiveness of the implemented security measures will be tested under various attack scenarios. Metrics such as detection rate, false positives, and system response time will be analyzed to evaluate the efficiency of the IDS and cryptographic security mechanisms.
 
 
 ### Mapping to Sustainable Development Goals (SDG)
+This project aligns with:
+SDG 9 - Industry, Innovation, and Infrastructure by strengthening automotive cybersecurity.
+SDG 11 - Sustainable Cities and Communities by ensuring safer vehicle communication.
+SDG 16 - Peace, Justice, and Strong Institutions by protecting automotive networks from cybercrime.
 
-
----
 
 ### References
+1. Addressing Vulnerabilities in CAN-FD: An Exploration and Security Enhancement Approach ;  by Naseeruddin Lodge, Nahush Tambe and Fareena Saqib
+Department of Electrical and Computer Engineering, University of North Carolina at Charlotte, Charlotte.
+2. Enhancing In-Vehicle Networks with CAN-FD: A study of Protocol Improvements over Classical CAN; Dhanush M S; Ananthakrinshna T;  2024 International Conference on Electronics, Computing, Communication and Control Technology (ICECCC)
+3. Intelligent Connected Vehicle CAN-FD Bus Network Security Protocol; Jingyi Jia; Yihu Xu; Yujing Wu; Yinan Xu; Yiming Fan; Dandan Zhang; 2023 International Conference on Mobile Internet, Cloud Computing and Information Security (MICCIS)
