@@ -55,7 +55,7 @@ Performance Evaluation and Testing: The effectiveness of the implemented securit
 
 ### Mapping to Sustainable Development Goals (SDG)
 This project aligns with:
-SDG 9 - Industry, Innovation, and Infrastructure by strengthening automotive cybersecurity.
+SDG 9 - Industry, Innovation, and Infrastructure by strengthening automotive cybersecurity.\
 SDG 11 - Sustainable Cities and Communities by ensuring safer vehicle communication.
 SDG 16 - Peace, Justice, and Strong Institutions by protecting automotive networks from cybercrime.
 
