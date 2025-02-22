@@ -61,11 +61,134 @@ The integration of 5G technology into Vehicle-to-Everything (V2X) communication 
 
 Based on the insights from the literature, the proposed work aims to design and implement a comprehensive 5G-enabled framework for V2X communication. This framework will address the challenges of low-latency data processing, secure communication, and efficient resource utilization in dense and dynamic vehicular environments. The proposed work also integrates real-world testing and simulation to validate the system's performance and reliability.
 
+#### Objective
+
+Validate the effectiveness of V2X communication (V2V, V2I, V2P) in safety-critical scenarios (pedestrian detection, accident alerts, cyberattacks) using a 5G-enabled simulation of the Amrita Vishwa Vidyapeetham, Coimbatore.
+
+#### Key Components
+
+1. 5G Network:
+
+   * Simulate gNBs (5G base stations) and UEs (User Equipment) for vehicles/pedestrians.
+
+   * Configure URLLC (Ultra-Reliable Low-Latency Communication) for accident alerts and eMBB (Enhanced Mobile Broadband) for data-heavy tasks.
+
+2. V2X Communication:
+
+   * CAM/DENM Messages: For real-time coordination (e.g., pedestrian movement, collision warnings).
+
+   * PC5/Uu Interfaces: Direct V2V (PC5) and V2I (Uu) communication.
+
+3. Safety Scenarios:
+
+   * Pedestrian Detection: Trigger alerts when pedestrians cross roads.
+
+   * Accident Scenario: Disseminate emergency alerts to nearby vehicles and emergency services.
+
+   * Cyber Attack: Simulate jamming or spoofing attacks to test network resilience.
+
 ---
 
 ### Implementation Details
 
 The development and optimization of 5G-V2X systems rely heavily on advanced simulation and testing tools. Traffic simulation platforms like SUMO (Simulation of Urban Mobility) integrate vehicular movement dynamics with communication models, enabling researchers to evaluate network performance under realistic scenarios. Network simulators such as OMNeT++ and NS-3 analyze latency, throughput, and signal interference, providing insights into the impact of traffic loads and mobility patterns on communication efficiency.
+
+#### Tools
+
+|Category |Tools |Purpose |
+| ------- |------|--------|
+|  Map & Traffic    |OpenStreetMap (OSM), SUMO, JOSM | Create road network, simulate vehicles/pedestrians, and traffic dynamics.|
+|Network Simulation |OMNeT++, Simu5G, INET Framework |Model 5G NR, gNBs, UEs, and V2X communication protocols.|
+|Integration |Veins, TraCI (SUMO-OMNeT++ API) |Synchronize SUMO traffic with OMNeT++ network simulation.|
+|Analysis |Python (Matplotlib, Pandas), Wireshark, SUMO-GUI |Visualize KPIs (latency, packet loss), debug, and analyze network traffic.|
+
+#### Methodology
+
+1. Map Preparation:
+
+   * Extract Amrita Vishwa Vidyapeetham, Coimbatore area from OSM.
+
+   * Convert OSM to SUMO format using netconvert and define traffic demand.
+
+2. Traffic Simulation:
+
+   * Model vehicles, pedestrians, and traffic lights in SUMO.
+
+   * Define routes for peak-hour traffic (e.g., college entry/exit times).
+
+3. 5G Network Setup:
+
+   * Deploy gNBs in OMNeT++/Simu5G to cover the campus area.
+
+   * Assign UEs to vehicles/pedestrians with QoS profiles (e.g., URLLC for DENM messages).
+
+4. Scenario Implementation:
+
+   * Pedestrian Detection: Use CAM messages to broadcast pedestrian locations.
+
+   * Accident Alert: Generate DENM messages on collision detection.
+
+   * Cyber Attack: Inject malicious nodes to disrupt communication.
+
+5. Validation:
+
+   * Compare KPIs (latency, packet delivery ratio) across scenarios.
+
+   * Test network resilience during attacks (e.g., fake message detection).
+
+---
+
+### Architecture Diagram
+
+#### Layers
+
+1. Traffic Simulation Layer (SUMO):
+
+   * Vehicles, pedestrians, and traffic lights.
+
+   * Real-time mobility data exported via TraCI API.
+
+2. Network Simulation Layer (OMNeT++/Simu5G):
+
+   * 5G NR Stack: gNBs, AMF, UPF (Simu5G modules).
+
+   * V2X Protocols: CAM/DENM message handlers.
+
+   * UEs: Vehicles and pedestrians with 5G connectivity.
+
+3. Application Layer:
+
+   * Pedestrian detection logic.
+
+   * Accident alert system.
+
+   * Cybersecurity modules (e.g., intrusion detection).
+
+4. Attack/Scenario Layer:
+
+   * Malicious nodes for jamming/spoofing.
+
+   * Emergency event triggers (e.g., sudden braking in SUMO).
+
+#### Data Flow
+
+* SUMO sends vehicle/pedestrian positions to OMNeT++ via TraCI.
+
+* OMNeT++ processes V2X messages (CAM/DENM) over the 5G network (Simu5G).
+
+* Application layer logic triggers alerts based on received data.
+
+* Attack scenarios disrupt communication (e.g., fake DENM messages).
+
+<p align="center">
+  <img src="../Image/Data_Flow.png" width=400/>
+</p>
+
+#### Amrita Vishwa Vidyapeetham, Coimbatore area from OSM
+
+<p align="center">
+  <img src="../Image/ONX_img.png" width=400/>
+</p>
 
 ---
 
@@ -77,12 +200,16 @@ The proposed 5G-enabled V2X framework aligns with multiple SDGs by addressing cr
 
 ### References
 
-[1]. 5G MEC-Enabled Vehicle Discovery Service for Streaming-Based CAM Applications
+[1]. Alalewi, A. A., Dayoub, I., & Cherkaoui, S. (2021). On 5G-V2X use cases and enabling technologies: A comprehensive survey. IEEE Access.
 
-[2]. A Group-Based Multicast Service Authentication and Data Transmission Scheme for 5G-V2X
+[2]. Alhilal, A. Y., Finley, B., Braud, T., Su, D., & Hui, P. (2022). Street smart in 5G: Vehicular applications, communication, and computing. IEEE Access.
 
-[3]. On 5G-V2X Use Cases and Enabling Technologies: A Comprehensive Survey
+[3]. Damigos, G., Lindgren, T., & Nikolakopoulos, G. (2023). Toward 5G edge computing for enabling autonomous aerial vehicles. IEEE Access.
 
-[4]. Toward 5G Edge Computing for Enabling Autonomous Aerial Vehicles
+[4]. Ma, R., Cao, J., Zhang, Y., Shang, C., Xiong, L., & Li, H. (2022). A group-based multicast service authentication and data transmission scheme for 5G-V2X. IEEE Transactions on Intelligent Transportation Systems.
+
+[5]. Mao, W., Akgul, O. U., Cho, B., Xiao, Y., & Ylä-Jääski, A. (2023). On-demand vehicular fog computing for beyond 5G networks. IEEE Transactions on Vehicular Technology.
+
+[6]. Velez, G., Perez, J., & Martin, A. (2022). 5G MEC-enabled vehicle discovery service for streaming-based CAM applications. Multimedia Tools and Applications.
 
 ---
