@@ -142,3 +142,6 @@ OTA updates reduce waste by eliminating disposable hardware updates and frequent
 3.	Victormills Iyieke et al., “An adaptable security-by-design approach for ensuring a secure Over the Air (OTA) update in modern vehicles,” 2025, Elsevier Computers and Security.
 4.	MathWorks (MATLAB & Simulink) – https://www.mathworks.com
 5.	David Ward, “Automotive Cybersecurity: An Introduction to ISO/ SAE 21434” ,2022, SAE International 
+
+
+[Secure OTA Updates for Electric Vehicles.pdf](https://github.com/user-attachments/files/18923386/Secure.OTA.Updates.for.Electric.Vehicles.pdf)
