@@ -79,11 +79,11 @@ Key Features of the Proposed System:
 
 
 ### Mapping to Sustainable Development Goals (SDG)
-The proposed work aligns with several UN Sustainable Development Goals:
-• SDG 7 (Affordable and Clean Energy): Optimizes energy management in EVs, reducing battery drain and improving efficiency.
-•	SDG 9 (Industry, Innovation, and Infrastructure): Promotes innovation in the automotive industry, enhancing infrastructure through intelligent vehicles.
-•	SDG 11 (Sustainable Cities and Communities): Improves vehicle safety and functionality, contributing to sustainable urban mobility.
-•	SDG 13 (Climate Action): Reduces physical interventions and operational inefficiencies, lowering the carbon footprint associated with traditional update methods.
+The proposed work aligns with several UN Sustainable Development Goals:\
+• SDG 7 (Affordable and Clean Energy): Optimizes energy management in EVs, reducing battery drain and improving efficiency.\
+• SDG 9 (Industry, Innovation, and Infrastructure): Promotes innovation in the automotive industry, enhancing infrastructure through intelligent vehicles.\
+• SDG 11 (Sustainable Cities and Communities): Improves vehicle safety and functionality, contributing to sustainable urban mobility.\
+• SDG 13 (Climate Action): Reduces physical interventions and operational inefficiencies, lowering the carbon footprint associated with traditional update methods.
 
 ---
 
