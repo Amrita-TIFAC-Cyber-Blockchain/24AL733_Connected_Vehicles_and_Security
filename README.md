@@ -67,7 +67,26 @@
 
 | Course Start | 11 - Dec - 2024 |
 |--------------|-----------------|
-| Mid-Term Examination |	Feb - 2025 |
-| End Semester Examination	| Apr - 2025 | 
+| Mini-Project Problem Statement Submission | 01 - Jan - 2025 | 
+| Quiz - 1	  |  31 - Jan - 2025 |
+| Mid-Term Examination |	07 - Feb - 2025 |
+| Review - 0 | 14 - Feb - 2025 to 20 - Feb - 2025 |
+| Review - 1 | 03 - Mar - 2025 |
+| Quiz - 2	  |  04 - Mar - 2025 |
+| Review - 2 | 19 - Mar - 2025 |
+| Quiz - 3 | 26 - Mar - 2025 | 
+| Missed Quiz | 02 - Apr - 2025 | 
+| Review - Final	| 04 - Apr - 2025 | 
+| End Semester Examination	| 17 - Apr - 2025 | 
 | Publication of Results |	May - 2025 | 
 
+### SDG Achievement (through Projects)
+<p align="center">
+<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G7.png" width=200/>
+<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G9.png" width=200/>
+<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G11.png" width=200/>
+<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G12.png" width=200/>
+<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G13.png" width=200/>
+<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G16.png" width=200/>
+<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G17.png" width=200/>
+</p>
