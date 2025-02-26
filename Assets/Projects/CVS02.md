@@ -8,65 +8,103 @@
 ![](https://img.shields.io/badge/Reviewed-TBD-brown) 
 
 ### Problem Statement
-Modern connected vehicles rely heavily on communication protocols like the Controller Area Network (CAN) and CAN-FD (Flexible Data-rate) to share critical information between Electronic Control Units (ECUs) and sensors. These protocols are vital for vehicle operations, from managing engine performance to ensuring safety systems function properly. However, since CAN and CAN-FD lack built-in security features, they are vulnerable to threats like data tampering, unauthorized access, message injection, and replay attacks.
-As connected vehicle technologies, especially Vehicle-to-Everything (V2X) systems, become more widespread, securing communication between ECUs and external sensors (such as radar, LiDAR, cameras, and environmental sensors) is increasingly important. 
-Without effective security measures, these vehicles face significant risks, such as:
-1.Unauthorized access to sensitive vehicle data.
-2.Manipulation or falsification of sensor data, leading to poor decisions.
-3.Replay attacks, where attackers reuse valid messages to manipulate the system.
-4.Eavesdropping on communication, which raises serious privacy concerns.
+Modern connected vehicles heavily rely on communication protocols like Controller Area Network (CAN) and CAN-FD (Flexible Data-rate) to facilitate the exchange of critical information between Electronic Control Units (ECUs) and sensors. These protocols are essential for vehicle operations, from managing engine performance to ensuring the functionality of safety systems.
+
+However, CAN and CAN-FD protocols lack built-in security features, making them vulnerable to various threats, including:
+1. Unauthorized access to sensitive vehicle data.
+2. Manipulation or falsification of sensor data, leading to inaccurate decisions. 
+3. Replay attacks, where attackers reuse valid messages to manipulate the system.
+4. Eavesdropping on communications, raising significant privacy concerns.
+   
+As technologies like Vehicle-to-Everything (V2X) systems become more widespread, securing communication between ECUs and external sensors (such as radar, LiDAR, cameras, and environmental sensors) is increasingly important. Without effective security measures, connected vehicles face serious risks to safety and privacy.
 
 
 
 ---
 
 ### Literature Survey
-From the literature survey here are some methods used or can be addressed to over come the CAN and CAN-FD vulnerabilities
-1.Device Authentication: Ensures only authorized devices can access the network, preventing unauthorized access and safeguarding the system against unverified data exchanges.
-2.Message Authentication (HMAC): Hash-based Message Authentication Code (HMAC) is used to verify the integrity and authenticity of messages, protecting against tampering during transmission.
-3.Encryption (AES): Encrypting messages with Advanced Encryption Standard (AES) ensures data confidentiality, preventing unauthorized access and eavesdropping.
-4.Enhanced Error Detection (CRC & Extended CRC): CRC (Cyclic Redundancy Check) and its extended version in CAN-FD improve error detection by identifying and discarding corrupted or tampered messages, maintaining data integrity.
-5.Replay Attack Prevention (Timestamps & Sequence Numbers): Adding timestamps and sequence numbers to messages ensures only current and valid data is processed, blocking attacks that retransmit previously captured messages.
-6.Bit Rate Monitoring (for CAN-FD): Monitors and controls the bit-rate switching process in CAN-FD to detect and prevent exploits like timing mismatches that can disrupt communication.
-7.Network Isolation and Gateway Security: Implements internal network isolation along with firewalls and gateway security to block unauthorized external access and protect against external threats.
-8.Packet Filtering and Intrusion Detection (for CAN-FD): Uses packet filtering and intrusion detection systems to identify and block suspicious messages or abnormal traffic, protecting the network from malicious activities.
+
+Several methods have been explored in the literature to mitigate the vulnerabilities associated with CAN and CAN-FD communication protocols. These methods aim to enhance the security and integrity of the vehicle network, ensuring safe and reliable operation:
+
+1. Device Authentication:  
+   Device authentication mechanisms are proposed to ensure that only authorized devices can access the network. This prevents unauthorized access and protects the         system from unverified data exchanges, reducing the risk of malicious attacks.
+
+2. Message Authentication (HMAC):  
+   The use of Hash-based Message Authentication Code (HMAC) is suggested as a way to verify the integrity and authenticity of messages. This ensures that messages have    not been tampered with during transmission, offering protection against potential data manipulation.
+
+3. Encryption (AES):  
+   Advanced Encryption Standard (AES) is often recommended for encrypting messages. AES ensures that the data remains confidential, preventing unauthorized access and     safeguarding against eavesdropping during communication.
+
+4. Enhanced Error Detection (CRC & Extended CRC):  
+   The implementation of Cyclic Redundancy Check (CRC) and its extended version in CAN-FD improves error detection capabilities. These techniques help identify and        discard corrupted or tampered messages, thereby maintaining the integrity of the data exchanged within the network.
+
+5. Replay Attack Prevention (Timestamps & Sequence Numbers):  
+   To defend against replay attacks, literature suggests adding timestamps and sequence numbers to messages. This approach ensures that only current and valid data is     processed, blocking the retransmission of previously captured messages and preventing manipulation of the system.
+
+6. Bit Rate Monitoring (for CAN-FD):  
+   Bit-rate monitoring in CAN-FD is another proposed method to detect and prevent exploits. By controlling the bit-rate switching process, it is possible to identify     and mitigate issues such as timing mismatches that could disrupt the communication flow.
+
+7. Network Isolation and Gateway Security:  
+   Implementing network isolation within the vehicle’s internal network, combined with firewalls and gateway security, can block unauthorized external access. This        approach protects the system from external threats and ensures that only trusted communication is allowed.
+
+8. Packet Filtering and Intrusion Detection (for CAN-FD):  
+   The use of packet filtering and intrusion detection systems (IDS) has been explored as a means to protect CAN-FD networks. These methods help identify and block        suspicious or abnormal traffic, thus defending the system against malicious activities.
+
 
 
 ---
 
 ### Proposed Work
-This project focuses on enhancing the security of CAN-FD networks by detecting and mitigating Message Tampering, Malicious Injection, and Denial-of-Service (DoS) attacks. MATLAB’s Vehicle Network Toolbox will be used to simulate a CAN-FD network, introduce attack scenarios, and implement security measures.\
-Key phases of the implementation include:\
-CAN-FD Network Simulation: A simulated CAN-FD network will be developed with multiple ECUs exchanging messages.\
-Attack Simulation:\
-Message Tampering: Unauthorized modification of messages.\
-Malicious Injection: Injection of unauthorized commands.\
-DoS Attack: Overloading the network with excessive messages.\
-Intrusion Detection System (IDS): A real-time IDS will monitor network traffic, detect anomalies, and identify security threats based on message integrity and frequency analysis.\
-AES-128 Encryption: To prevent tampering and unauthorized access, all CAN-FD messages will be encrypted using AES-128, ensuring data confidentiality and integrity.\
-Defensive Measures:\
-Rate-monitoring to detect DoS attacks.\
-Firewall-based filtering to block unauthorized messages.\
-Secure transceiver communication to authenticate ECUs.\
-Performance Evaluation:\
-Accuracy of IDS detection.\
-Latency impact of AES-128 encryption.\
-Response time to security threats.\
-This approach ensures a secure and resilient CAN-FD communication system, protecting against critical cyber threats.
+This project focuses on enhancing the security of CAN-FD networks by detecting and mitigating Message Tampering, Malicious Injection, and Denial-of-Service (DoS) attacks. The following key phases and methods will be employed:
+
+1. CAN-FD Network Simulation:  
+   A CAN-FD network will be simulated, consisting of multiple ECUs exchanging messages within the system.
+
+2. Attack Simulation:  
+   - Message Tampering: Unauthorized modification of messages.  
+   - Malicious Injection: Injection of unauthorized commands into the network.  
+   - DoS Attack: Overloading the network with excessive messages, disrupting communication.
+
+3. Intrusion Detection System (IDS):  
+   A real-time IDS will monitor the network traffic, detect anomalies, and identify security threats through message integrity and frequency analysis.
+
+4. AES-128 Encryption:  
+   All CAN-FD messages will be encrypted using AES-128, ensuring data confidentiality and integrity, preventing tampering, and unauthorized access.
+
+5. Defensive Measures:  
+   - Rate-Monitoring: To detect DoS attacks by tracking message rate and identifying potential overload situations.  
+   - Firewall-Based Filtering: Blocks unauthorized messages and filters out malicious traffic.  
+   - Secure Transceiver Communication: Authenticates ECUs to ensure that only authorized devices can communicate within the network.
+
+6. Performance Evaluation:  
+   The performance of security measures will be evaluated by:
+   - Accuracy of IDS detection.
+   - Latency impact of AES-128 encryption.
+   - Response time to security threats.
+
+This approach ensures the development of a secure and resilient CAN-FD communication system, protecting against critical cyber threats and safeguarding vehicle network integrity.
+
 
 ---
 
 
 ### Implementation Details
-To address the identified threats, MATLAB will be used to simulate the CAN-FD network, introduce attack scenarios, and implement security mechanisms. The project will be carried out in the following steps:\
-CAN-FD Network Simulation: The Vehicle Network Toolbox will create A simulated CAN-FD network in MATLAB. This will involve setting up multiple Electronic Control Units (ECUs) communicating over a CAN-FD bus. The network will be designed to mimic real-world vehicle communication, with legitimate message exchanges between various ECUs.\
-Message Tampering Attack Simulation: A normal CAN-FD message transmission scenario will be established. An attacker node will be introduced to intercept and modify legitimate messages before forwarding them. The system will then analyze the impact of these alterations on vehicle functionality.
-Detection and Prevention of Message Tampering: A real-time Intrusion Detection System (IDS) will be implemented to monitor message integrity. This will be achieved by comparing incoming messages with expected values. Cryptographic authentication techniques such as AES-128 encryption and HMAC verification will be employed to secure message transmissions and detect unauthorized modifications.\
-Malicious Injection Attack Simulation: The system will generate normal CAN-FD messages and introduce an attacker node that injects unauthorized messages. This attack will test the vulnerability of the network to unauthorized command execution, such as false brake or acceleration signals.
-Detection and Prevention of Malicious Injection: ECU authentication mechanisms will be enforced using Message Authentication Codes (MACs). Messages from unauthorized sources will be filtered out, preventing false commands from affecting the system.\
-Denial-of-Service (DoS) Attack Simulation: A flooding attack will be simulated, where an attacker node sends an excessive number of messages to overwhelm the CAN-FD bus. The effect of this attack on normal ECU communication and system response times will be analyzed.\
-Detection and Prevention of DoS Attacks: Rate-monitoring techniques will be implemented to detect abnormal traffic patterns. Firewall-based packet filtering will be used to limit excessive message transmission. Additionally, SYN cookies will be applied to prevent repeated malicious message floods.\
-Performance Evaluation and Testing: The effectiveness of the implemented security measures will be tested under various attack scenarios. Metrics such as detection rate, false positives, and system response time will be analyzed to evaluate the efficiency of the IDS and cryptographic security mechanisms.
+
+1. MATLAB’s Vehicle Network Toolbox will create a simulated CAN-FD network. Multiple Electronic Control Units (ECUs) will communicate over a CAN-FD bus, designed to replicate real-world vehicle communication with legitimate message exchanges between ECUs.
+
+2. A normal CAN-FD message transmission scenario will be set up. An attacker node will intercept and modify legitimate messages before forwarding them. The system will analyze how these alterations impact vehicle functionality.
+
+3. A real-time Intrusion Detection System (IDS) will monitor message integrity by comparing incoming messages with expected values. Cryptographic authentication methods, such as AES-128 encryption and HMAC verification, will be used to secure message transmissions and detect unauthorized modifications.
+
+4. Normal CAN-FD messages will be generated, and an attacker node will inject unauthorized messages. This simulation will test the network’s vulnerability to unauthorized command execution, such as false brake or acceleration signals.
+
+5. ECU authentication mechanisms will be enforced using Message Authentication Codes (MACs). Messages from unauthorized sources will be filtered out, preventing the execution of false commands that could compromise the system.
+
+6. A flooding attack will be simulated, where an attacker node sends an excessive number of messages to overwhelm the CAN-FD bus. The system's ability to maintain normal ECU communication and response times will be evaluated.
+
+7. Rate-monitoring techniques will be implemented to detect abnormal traffic patterns. Firewall-based packet filtering will be used to limit excessive message transmission, and SYN cookies will be applied to prevent repeated malicious message floods.
+
+8. The effectiveness of the implemented security measures will be tested under various attack scenarios. Metrics such as detection rate, false positives, and system response time will be analyzed to evaluate the efficiency of the IDS and cryptographic security mechanisms.
 
 ---
 
