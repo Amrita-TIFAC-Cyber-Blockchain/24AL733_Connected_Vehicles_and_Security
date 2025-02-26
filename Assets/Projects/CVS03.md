@@ -28,10 +28,21 @@ Due to these all kinds of vulnerabilities, it is essential to implement IDS and 
 ---
 
 ### Literature Survey
-The first paper [1], have used a lightweight multi-stage Intrusion Detection System (IDS) for in-vehicle networks using deep learning. It employs an artificial neural network (ANN) for known attacks and an LSTM-autoencoder for unknown threats. The unsupervised model, which works as an anomaly detection model, is trained solely on normal data, and any samples that deviate significantly from the learned patterns are identified as an anomaly or an unseen attack. Once the unsupervised model detects malicious traffic, it is flagged for further investigation. Any anomalies detected by the unsupervised model that are later confirmed as threats will have a new attack label generated. For broader applicability, the proposed IDS can learn the legitimate CAN IDs and normal behavior for each vehicle at design time and monitor the network to detect any attacks during operational runtime. The system has integrated hierarchical federated learning for privacy and achieving high accuracy and low false alarm rates. Utilizing FL allows the IDS to benefit from various driving scenarios, enhances its resilience against new and unseen attacks, and enables continuous learning without compromising the privacy and security of the training data.<br>
-In paper [2], discussed different IDPS methodology mostly focused on hybrid detection system using anomaly-based and signature-based detection mechanism. It also introduces SNORT which is a free open-source intrusion detection system. It is one of the Signature based Intrusion Detection and Prevention System. This tool lies with the formation of rules.  Rules can be created/designed to block traffic or to merely send alerts, alerts can be logged to a log file, can be sent to the console or displayed on the screen.  They can be configured to send an email to someone or they can be logged to database. Various options can be used for the formation of rules. Snort basically works on the three modes: Sniffer mode, Packet logger mode and NIDS mode. this system may provide a good model for the realization of the intrusion detection system. This paper includes the reference to the structure of snort and NTOP, and proposes a new design idea of combining Snort with NTOP, which is validated by the experiment. The results of experiment prove that intrusion behaviour can be detected by this system.  This system works well and has been successfully tested.<br>
-In paper [3], analyses intrusion detection systems (IDS) for automotive Ethernet networks, challenges, methodologies, and solutions for securing in-vehicle communications. It highlights the importance of using IDS against cyberattacks, compares existing IDS architectures, and proposes future research directions, including blockchain, machine learning, and edge computing for enhanced security and scalability.<br>
-In paper [4], it proposes an embedded intrusion detection system (IDS) for connected vehicles using a two-step algorithm. It analyses CAN-Bus traffic with spatial-temporal methods and Bayesian networks to identify attacks like DoS and Frame Fuzzification. A Bayesian network is a probabilistic graph that predicts the dependency relationships between a set of random variables through a probabilistic inference process. Once the threat model and the risks associated with it have been identified, a system is devised to mitigate these dangers and test them. Using a two-step detection algorithm that exploits both the variation of the status parameters of the various ECUs over time and the Bayesian networks, it can identify a possible attack. First of all, we have to analyze the domain to understand the parameters and their related ECUs that must be taken into consideration to map the vehicle and all the possible cyber risks associated with it. To obtain the actual conditions of a possible attack on the vehicle, the conditions were defined in which one can be in the presence of a specific attack. In particular, as we will see in the next section, the parameters that, combined, can identify a possible attack situation. This system may provide a good model for the realization of the intrusion detection system. 
+<b>Paper 1</b>: A robust multi-stage intrusion detection system for in-vehicle network security using hierarchical federated learning<br>
+<b>Publication year</b>: October 2024 (Vehicular Communication Volume 49)<br>
+<b>Summary</b>: In this paper they have used a lightweight multi-stage Intrusion Detection System (IDS) for in-vehicle networks using deep learning. It employs an artificial neural network (ANN) for known attacks and an LSTM-autoencoder for unknown threats. The unsupervised model, which works as an anomaly detection model, is trained solely on normal data, and any samples that deviate significantly from the learned patterns are identified as an anomaly or an unseen attack. Once the unsupervised model detects malicious traffic, it is flagged for further investigation. Any anomalies detected by the unsupervised model that are later confirmed as threats will have a new attack label generated. For broader applicability, the proposed IDS can learn the legitimate CAN IDs and normal behavior for each vehicle at design time and monitor the network to detect any attacks during operational runtime. The system has integrated hierarchical federated learning for privacy and achieving high accuracy and low false alarm rates. Utilizing FL allows the IDS to benefit from various driving scenarios, enhances its resilience against new and unseen attacks, and enables continuous learning without compromising the privacy and security of the training data.<br>
+
+<b>Paper 2</b>:Intrusion Detection Prevention System using SNORT<br>
+<b>Publication year</b>: December 2018 (International Journal of Computer Applications)<br>
+<b>Summary</b>: Discussed different IDPS methodology mostly focused on hybrid detection system using anomaly-based and signature-based detection mechanism. It also introduces SNORT which is a free open-source intrusion detection system. It is one of the Signature based Intrusion Detection and Prevention System. This tool lies with the formation of rules.  Rules can be created/designed to block traffic or to merely send alerts, alerts can be logged to a log file, can be sent to the console or displayed on the screen.  They can be configured to send an email to someone or they can be logged to database. Various options can be used for the formation of rules. Snort basically works on the three modes: Sniffer mode, Packet logger mode and NIDS mode. this system may provide a good model for the realization of the intrusion detection system. This paper includes the reference to the structure of snort and NTOP, and proposes a new design idea of combining Snort with NTOP, which is validated by the experiment. The results of experiment prove that intrusion behaviour can be detected by this system.  This system works well and has been successfully tested.<br>
+
+<b>Paper 3</b>: Intrusion Detection Systems in Automotive Ethernet Networks: Challenges, Opportunities and Future Research Trends<br>
+<b>Publication year</b>: March 2024 (IEEE Internet of Things Magazine)<br>
+<b>Summary</b>: analyses intrusion detection systems (IDS) for automotive Ethernet networks, challenges, methodologies, and solutions for securing in-vehicle communications. It highlights the importance of using IDS against cyberattacks, compares existing IDS architectures, and proposes future research directions, including blockchain, machine learning, and edge computing for enhanced security and scalability.<br>
+
+<b>Paper 4</b>: Cybersecurity in Automotive: An Intrusion Detection System in Connected Vehicles<br>
+<b>Publication year</b>: July 2021 (MDPI)<br>
+<b>Summary</b>: It proposes an embedded intrusion detection system (IDS) for connected vehicles using a two-step algorithm. It analyses CAN-Bus traffic with spatial-temporal methods and Bayesian networks to identify attacks like DoS and Frame Fuzzification. A Bayesian network is a probabilistic graph that predicts the dependency relationships between a set of random variables through a probabilistic inference process. Once the threat model and the risks associated with it have been identified, a system is devised to mitigate these dangers and test them. Using a two-step detection algorithm that exploits both the variation of the status parameters of the various ECUs over time and the Bayesian networks, it can identify a possible attack. First of all, we have to analyze the domain to understand the parameters and their related ECUs that must be taken into consideration to map the vehicle and all the possible cyber risks associated with it. To obtain the actual conditions of a possible attack on the vehicle, the conditions were defined in which one can be in the presence of a specific attack. In particular, as we will see in the next section, the parameters that, combined, can identify a possible attack situation. This system may provide a good model for the realization of the intrusion detection system. 
 
 ---
 
@@ -49,6 +60,22 @@ The proposed Intrusion Detection System (IDS) employs a hybrid, multi-stage appr
 •	Any anomalies detected by the unsupervised model that are later confirmed as threats will have a new attack label generated.<br>
 
 Targeted Network: CAN
+Targeted Intrusion Attacks: Malware attack with DOS and Remote Attack through Bluetooth.
+
+### Tools and Technologies
+1. Vector CANoe
+2. CAPL Scripting for simulation
+3. Deep Learning Algorithms
+4. Snort tool
+
+### Architecture Diagram
+Architecture Model for IDS and IPS in Connected Vehicles<br>
+1. Data Collection Layer<br>
+2. Preprocessing Layer<br>
+3. Detection Engine<br>
+4. Decision Layer<br>
+6. Monitoring & Visualization Layer<br>
+7. Evaluation & Feedback Loop <br>
 
 ---
 
@@ -83,35 +110,9 @@ The proposed IDS implementation involves the following steps:<br>
 
 ---
 
-### Architecture Model
-Architecture Model for IDS and IPS in Connected Vehicles<br>
-1. Data Collection Layer: Continuous real-time data collection from vehicle networks.<br>
-•	Sources: CAN Bus, OBD-II Port, Infotainment Systems, External Communication Interfaces (Wi-Fi, Bluetooth, USB, etc.).<br>
-2. Preprocessing Layer<br>
-•	Data Cleaning & Normalization: Filling missing values, and standardizing data.<br>
-•	Feature Extraction: Extracting essential CAN IDs, and payload for analysis.<br>
-3. Detection Engine<br>
-a. Signature-Based IDS (SIDS)<br>
-•	 Tool: SNORT<br>
-•	Mechanism: Predefined attack signatures (e.g., DoS, spoofing). Rule-based filtering and blocking.<br>
-•	Deployment Mode: NIDS mode for monitoring and IPS mode for active prevention.<br>
-b. Anomaly-Based IDS (AIDS)<br>
-•	Model: LSTM-Autoencoder trained on normal CAN traffic.<br>
-•	Mechanism: Detect deviations from normal behaviour. Identifies novel or zero-day attacks.<br>
-4. Decision Layer<br>
-•	Threat Classification: Known threats are detected.<br>
-•	Real-Time Response: Drop malicious packets.<br>
-6. Monitoring & Visualization Layer<br>
-•	Dashboard: Real-time threat visualization, alerts, and performance analytics.<br>
-7. Evaluation & Feedback Loop <br>
-•	Performance Metrics: Detection rate, false positives/negatives, response time.<br>
-•	Continuous Improvement: Update threat databases, refine ML models, and adapt to new attack vectors.<br>
-
-
-
 ### References
-[1] https://www.sciencedirect.com/science/article/pii/S2214209624001128<br>
-[2] https://www.researchgate.net/publication/329716671_Intrusion_Detection_Prevention_System_using_SNORT<br>
-[3] https://ieeexplore.ieee.org/document/10463660<br>
-[4] https://www.mdpi.com/2079-9292/10/15/1765<br>
-[5]https://www.researchgate.net/publication/334583725_Intrusion_detection_system_for_automotive_Controller_Area_Network_CAN_bus_system_a_review
+[1] Muzun Althunayyan, Amir Javed, Omer Rana a (2024). A robust multi-stage intrusion detection system for in-vehicle network security using hierarchical federated learning. Vehicular Communication Volume 49<br>
+[2] Aaliya Tasneem, Abhishek Kumar, Shabnam Sharma (2018). Intrusion Detection Prevention System using SNORT. Intrusion Detection Prevention System using SNORT.<br>
+[3] Nordine Quadar, Abdellah Chehri, Benoit Debaque, Imran Ahmed, Gwangil Jeon (2024). Intrusion Detection Systems in Automotive Ethernet Networks: Challenges, Opportunities and Future Research Trends. IEEE Internet of Things Magazine.<br>
+[4] Francesco Pascale, Ennio Andrea Adinolfi, Simone Coppola, and Emanuele Santonicola (2021).Cybersecurity in Automotive: An Intrusion Detection System in Connected Vehicles.MDPI<br>
+[5]Siti Farhana Lokman, Abu Talib Othman, Muhamad Husaini (2019).Intrusion detection system for automotive Controller Area Network (CAN) bus system: a review. EURASIP Journal on Wireless Communications and Networking
