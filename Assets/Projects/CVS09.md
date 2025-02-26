@@ -20,22 +20,22 @@ a lot of manual labor, which increases costs, lengthens downtime, and could dela
 ### Literature Survey
 
 **Paper-1:** Continuous Integration, Delivery and Deployment: A Systematic Review on Approaches, Tools, Challenges and Practices
-**Name Of Journal:** IEEE ACCESS
+**Name Of Journal:** IEEE ACCESS.
 **Summary:** This paper has the details about the best practices for ci/cd implementations, challenges in ci/cd implementation and classification of ci/cd. The best tools required for ci/cd implementation are also mentioned here.
 **Research Gap:** The gap found here is lack of security and real world considerations.
 
 **Paper-2:** Scalable Python Tools for Managing OTA Updates in Automotive Systems.
-**Name Of Journal:** International Journal of Scientific Research and Management (IJSRM)
+**Name Of Journal:** International Journal of Scientific Research and Management (IJSRM).
 **Summary:** By making it possible to remotely update software in cars and provide enhanced functionality, security patches, and bug fixes without the need for physical intervention, over-the-air (OTA) updates have completely transformed the automotive sector. Python offers a promising framework for creating scalable tools to effectively manage OTA updates in automotive systems because of its adaptability and robust ecosystem. This study examines existing research and highlights the benefits, drawbacks, and potential avenues for future study of several Python-based frameworks, tools, and approaches for OTA update implementation and management in automotive systems.
 **Research Gap:** Real world considerations.
 
 **Paper-3:** Creation of Continuous Integration Continuous Deployment pipeline using cloud
-**Name Of Journal:** 2024 5th International Conference on Intelligent Communication Technologies and Virtual Mobile Networks (ICICV)
+**Name Of Journal:** 2024 5th International Conference on Intelligent Communication Technologies and Virtual Mobile Networks (ICICV).
 **Summary:** The document's suggested concept is to use cloud-based tools to build a strong Continuous Integration and Continuous Deployment (CI/CD) pipeline. In the automotive industry, where software-defined vehicles need regular updates and bug fixes, the objective is to expedite the development, testing, and deployment processes for software in vehicles. Software updates will be delivered to vehicles—including ones that are currently in use—in a timely and secure manner thanks to this CI/CD pipeline, which will also automate several development stages and minimize manual interventions.
 **Research Gap:** Real world considerations, Security & Practical implementation
 
-**Paper-4:** Investigation And Implementation of Jenkins Pipelines into Raspberry Pi For Automated Control Units
-**Name Of Journal:** III International Scientific and Practical Conference
+**Paper-4:** Investigation And Implementation of Jenkins Pipelines into Raspberry Pi For Automated Control Units.
+**Name Of Journal:** III International Scientific and Practical Conference.
 **Summary:** To design and execute a Raspberry Pi-based automated Jenkins pipeline for controlling block units (such as motors, temperature sensors, and other appliances) for contemporary industrial applications. The solution combines the Raspberry Pi with Jenkins, a potent automation tool, to support continuous integration and delivery (CI/CD) procedures and provide flexible and effective control over a variety of devices.
 **Research Gap:** Real world considerations & Security.
 
