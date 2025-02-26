@@ -64,7 +64,7 @@ a lot of manual labor, which increases costs, lengthens downtime, and could dela
 ---
 
 ### References
-1. Continuous Integration, Delivery and Deployment: A Systematic Review on Approaches, Tools, Challenges and Practices.
-2. Scalable Python Tools for Managing OTA Updates in Automotive Systems.
-3. Creation of Continuous Integration Continuous Deployment pipeline using cloud.
-4. Investigation And Implementation of Jenkins Pipelines into Raspberry Pi For Automated Control Units.
+[1] MOJTABA SHAHIN, L. Z., MUHAMMAD ALI BABAR. (2017). Continuous Integration, Delivery and Deployment: A Systematic Review on Approaches, Tools, Challenges and Practices. IEEE Access.
+[2] Ayush Ankit, M. J., K Nimala. (2024). Creation of continuous integration continuous deployment pipeline using cloud. 2024 5th International Conference on Intelligent Communication Technologies and Virtual Mobile Networks (ICICV).
+[3] Karthikeyan Palanichamy. (2023). Scalable Python Tools for Managing OTA Updates in Automotive Systems. International Journal of Scientific Research and Management (IJSRM).
+[4] Volodymyr Havran, Maria Orynchak. (2022). Investigation And Implementation of Jenkins Pipelines into Raspberry Pi For Automated Control Units. Education and science of today: intersectoral issues and development of sciences.
