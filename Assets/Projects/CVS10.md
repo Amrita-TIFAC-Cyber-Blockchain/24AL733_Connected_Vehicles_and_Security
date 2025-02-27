@@ -8,7 +8,7 @@
 ![](https://img.shields.io/badge/Reviewed-TBD-brown) 
 
 ### Problem Statement
-Modern vehicles increasingly rely on Electronic Control Units (ECUs) to manage critical functions such as engine control, braking, infotainment, and safety systems. These ECUs require frequent firmware updates to address software bugs, enhance performance, and strengthen cybersecurity. Traditionally, firmware updates are carried out manually at service centers through wired connections. This approach is inefficient, costly, and time-consuming, leading to vehicle downtime and inconvenience for users.
+Modern vehicles increasingly rely on Electronic Control Units (ECUs) to manage critical functions such as braking, infotainment, and safety systems. These ECUs require frequent firmware updates to address software bugs, enhance performance, and strengthen cybersecurity. Traditionally, firmware updates are carried out manually at service centers through wired connections. This approach is inefficient, costly, and time-consuming, leading to vehicle downtime and inconvenience for users.
 To overcome these limitations, the automotive industry is shifting towards Over-the-Air (OTA) firmware updates, allowing remote software updates without requiring physical access to the vehicle. While OTA updates offer convenience and cost savings, their large-scale implementation presents several technical and security challenges, including:
 1.	Cybersecurity Vulnerabilities: Hackers may exploit weaknesses in the update process to inject malicious firmware, which can compromise vehicle control systems and endanger passenger safety.
 2.	Network Reliability Issues: Inconsistent or poor network conditions can lead to incomplete or corrupted updates, causing ECU malfunctions or failures.
