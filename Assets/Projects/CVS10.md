@@ -26,9 +26,19 @@ By combining AI-driven diagnostics, robust cybersecurity, and efficient communic
 ---
 
 ### Literature Survey
-1.	FOTAMOTIVE: Highlights the inefficiencies of traditional update methods and proposes a FOTA solution to address OEM, dealer, and consumer challenges.
+1.	Title: Firmware Over the Air for Automotive (FOTAMOTIVE)
 
-2.	Title:Firmware Over The Air (FOTA) and Wireless Diagnostics in Vehicles:
+	Name of Journal: Published in IEEE Xplore (2014)
+
+	Summary: The paper presents FOTAMOTIVE, a cloud-based Firmware Over-the-Air (FOTA) system for automotive ECUs. It addresses challenges in traditional firmware update methods, which require physical access, 		leading to high recall costs and inconvenience. The proposed system enables wireless updates through a cloud-server mechanism, where OEMs can deploy updates remotely to vehicle ECUs. This enhances efficiency, 	scalability, and cost-effectiveness. The paper also highlights potential security risks, connectivity challenges, and safety concerns associated with remote firmware updates.
+	
+	Research Gap:
+	•	Post-Installation Verification: The study focuses on secure transmission but lacks a mechanism to verify firmware integrity after installation.
+	•	Security Measures: While it mentions cybersecurity risks, it does not propose a detailed security framework to mitigate unauthorized firmware modifications.
+	•	Real-World Implementation: The paper relies on simulations, and real-world validation in automotive environments is missing.
+	•	Rollback & Recovery: There is no discussion on rollback strategies in case of a failed update, which is crucial for vehicle safety.
+
+3.	Title:Firmware Over The Air (FOTA) and Wireless Diagnostics in Vehicles:
 	
 	Name of Journal:Proceedings of the XXIX International Scientific Conference Electronics - ET2020, IEEE, September 16-18, 20
 
