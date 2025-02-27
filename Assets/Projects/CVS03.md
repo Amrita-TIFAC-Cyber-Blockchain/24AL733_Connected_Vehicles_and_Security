@@ -70,12 +70,8 @@ Targeted Intrusion Attacks: Malware attack with DOS and Remote Attack through Bl
 
 ### Architecture Diagram
 Architecture Model for IDS and IPS in Connected Vehicles<br>
-1. Data Collection Layer<br>
-2. Preprocessing Layer<br>
-3. Detection Engine<br>
-4. Decision Layer<br>
-6. Monitoring & Visualization Layer<br>
-7. Evaluation & Feedback Loop <br>
+
+![image](https://github.com/user-attachments/assets/ffb13ebc-15a6-4268-bcb7-874e237cc6fa)
 
 ---
 
