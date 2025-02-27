@@ -27,41 +27,22 @@ By combining AI-driven diagnostics, robust cybersecurity, and efficient communic
 
 ### Literature Survey
 1.	FOTAMOTIVE: Highlights the inefficiencies of traditional update methods and proposes a FOTA solution to address OEM, dealer, and consumer challenges.
-2.	Firmware Over The Air (FOTA) and Wireless Diagnostics in Vehicles:
-	1. Introduction to FOTA and Wireless Diagnostics
-	 Firmware Over The Air (FOTA) updates and wireless diagnostics are emerging as critical technologies in modern automotive systems. With the increasing reliance on electronic control units (ECUs) in 		 vehicles, manufacturers aim to enhance vehicle performance, security, and user convenience by enabling remote software updates. Wireless diagnostics complement this by allowing real-time monitoring and 	 fault detection, reducing maintenance costs and downtime for vehicle owners.
-	2. The Need for FOTA in Modern Vehicles
-	 Traditional software updates require physical access to the vehicle, often necessitating service center visits, which are both time-consuming and costly for Original Equipment Manufacturers (OEMs). The 	 implementation of FOTA eliminates the need for these visits by allowing seamless updates via wireless communication. The study highlights how this shift can lead to significant cost savings for 	 	 manufacturers and increased convenience for consumers.
-	3. Challenges in Implementing FOTA Systems
-	 Several challenges need to be addressed when designing and deploying FOTA solutions:
-	 •System Architecture: A key issue is ensuring compatibility across various communication protocols such as Controller Area Network (CAN), Local Interconnect Network (LIN), and Automotive Ethernet. The 	  system should support all interfaces to allow smooth integration with different ECUs.
-	 •Memory Constraints: Memory allocation for storing firmware updates poses a challenge, as ECUs often have limited flash storage. The study suggests techniques such as external memory buffering and 
-	  optimizing software structures to minimize memory usage.
-	 •Cost Optimization: While integrating FOTA increases the initial cost of vehicles, long-term savings can be achieved by reducing physical servicing needs. The research explores approaches like reducing 	  internal memory requirements and using supercapacitors for energy efficiency.
-	 •Security Concerns: Wireless updates introduce vulnerabilities to cyber threats. The paper outlines the need for encryption mechanisms, authentication protocols, and secure data transmission to prevent 
-	  unauthorized access to the vehicle’s software.
-	4. Proposed Solutions for Effective FOTA Deployment
-	The paper discusses various methodologies to enhance FOTA performance:
-	•Architectural Improvements: Implementing a centralized control unit that manages all firmware updates and diagnostic functions.
-	•Enhanced Security Mechanisms: Encryption techniques such as CRC32 validation and hardware security keys can prevent malicious interference.
-	•Software Optimization: Using universal software modules and compression techniques to reduce update file sizes.
-	5. The Future of Wireless Diagnostics and FOTA
-	The research emphasizes the potential of FOTA to revolutionize vehicle maintenance by enabling remote diagnostics, predictive maintenance, and enhanced security features. As electric and autonomous 		vehicles gain traction, FOTA will play a crucial role in ensuring their software remains up to date and resilient to cyber threats.
-	Conclusion:
-	The literature review highlights the significance of FOTA and wireless diagnostics in modern automotive technology. By addressing security risks, optimizing memory usage, and refining communication 		architectures, the industry can unlock the full potential of these technologies. Future advancements in cloud computing and artificial intelligence are expected to further enhance FOTA capabilities.
 
-5.	Self-Verification Framework: Discusses virtualization techniques and hash-based verification protocols to ensure the integrity of firmware installations.
-6.	Secure FOTA Protocols: Focuses on security challenges in intelligent vehicles, emphasizing the need for data integrity, authentication, and resilience to packet loss in wireless communications.
-7.	AI-Enabled UDS for Secure OTA Updates (IARJSET, 2023):
-    •	Proposes an Ethernet/IP-based Unified Diagnostic Service (UDS) for secure OTA updates.
-    •	Uses AI for anomaly detection, ensuring real-time threat mitigation.
-    •	Implements secure boot, authentication, and multi-domain security to prevent cyber threats.
-    •	Limitation: Requires high computational power and Ethernet/IP infrastructure, limiting applicability in all vehicles.
-5.LoRaWAN & Blockchain for Secure OTA Updates (IEEE QRS-C 2024)
-    •	Introduces LoRaWAN for long-range, low-power OTA updates in connected vehicles.
-    •	Uses blockchain for integrity verification and IPFS for decentralized storage to prevent tampering.
-    •	Simulation results show efficient energy usage but limited bandwidth affects large updates.
-    •	Limitation: Blockchain transaction costs and latency can impact real-time updates.
+2.	Title:Firmware Over The Air (FOTA) and Wireless Diagnostics in Vehicles:
+	Name of Journal:Proceedings of the XXIX International Scientific Conference Electronics - ET2020, IEEE, September 16-18, 2020
+	Summary:This paper explores the architecture and challenges of Firmware Over The Air (FOTA) systems and wireless vehicle diagnostics. The increasing reliance on Electronic Control Units (ECUs) in modern 	vehicles necessitates frequent firmware updates to fix software bugs, enhance cybersecurity, and optimize performance. Traditionally, firmware updates require service center visits, which are costly and 	time-consuming. FOTA technology eliminates this need by enabling wireless updates, thereby improving efficiency and reducing downtime.
+	Research Gap:While the paper provides a broad overview of FOTA and wireless diagnostics, it lacks insights into AI-driven predictive maintenance, advanced security measures (e.g., IDS, man-in-the-middle 	attack prevention), legacy vehicle compatibility, and network reliability issues affecting OTA update success. Addressing these gaps is crucial for a secure and efficient FOTA deployment.
+
+3.	Self-Verification Framework: Discusses virtualization techniques and hash-based verification protocols to ensure the integrity of firmware installations.
+
+4.	Title: AI-Enabled Unified Diagnostic Services: Ensuring Secure and Efficient OTA Updates Over Ethernet/IP
+	
+	Name of Journal: International Advanced Research Journal in Science, Engineering, and Technology (IARJSET), Vol. 10, Issue 10, October 2023
+
+	Summary: The paper introduces an Ethernet/IP-based Unified Diagnostic Service (UDS) architecture to enhance OTA firmware updates in vehicles. It addresses bandwidth, latency, and security limitations of 	traditional CAN/LIN-based OTA methods. Key features include non-interference with runtime services, enhanced cybersecurity (secure boot, authentication), and ISO-14229 UDS standardization for OEM and 	aftermarket compatibility. The system is tested under various network conditions, demonstrating improved reliability, security, and update speed over existing methods.
+	Research Gap :
+	The study lacks AI-driven predictive maintenance for ECU failure detection, intrusion detection systems (IDS) for enhanced cybersecurity, and legacy ECU compatibility with Ethernet/IP updates. It also 	does not address scalability and network reliability challenges for large-scale deployment.
+
 ---
 
 ### Proposed Work
