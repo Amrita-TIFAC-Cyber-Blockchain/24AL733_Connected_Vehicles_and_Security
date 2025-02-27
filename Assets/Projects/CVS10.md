@@ -29,17 +29,21 @@ By combining AI-driven diagnostics, robust cybersecurity, and efficient communic
 1.	FOTAMOTIVE: Highlights the inefficiencies of traditional update methods and proposes a FOTA solution to address OEM, dealer, and consumer challenges.
 
 2.	Title:Firmware Over The Air (FOTA) and Wireless Diagnostics in Vehicles:
-	Name of Journal:Proceedings of the XXIX International Scientific Conference Electronics - ET2020, IEEE, September 16-18, 2020
+	
+	Name of Journal:Proceedings of the XXIX International Scientific Conference Electronics - ET2020, IEEE, September 16-18, 20
+
 	Summary:This paper explores the architecture and challenges of Firmware Over The Air (FOTA) systems and wireless vehicle diagnostics. The increasing reliance on Electronic Control Units (ECUs) in modern 	vehicles necessitates frequent firmware updates to fix software bugs, enhance cybersecurity, and optimize performance. Traditionally, firmware updates require service center visits, which are costly and 	time-consuming. FOTA technology eliminates this need by enabling wireless updates, thereby improving efficiency and reducing downtime.
+
 	Research Gap:While the paper provides a broad overview of FOTA and wireless diagnostics, it lacks insights into AI-driven predictive maintenance, advanced security measures (e.g., IDS, man-in-the-middle 	attack prevention), legacy vehicle compatibility, and network reliability issues affecting OTA update success. Addressing these gaps is crucial for a secure and efficient FOTA deployment.
 
-3.	Self-Verification Framework: Discusses virtualization techniques and hash-based verification protocols to ensure the integrity of firmware installations.
+4.	Self-Verification Framework: Discusses virtualization techniques and hash-based verification protocols to ensure the integrity of firmware installations.
 
-4.	Title: AI-Enabled Unified Diagnostic Services: Ensuring Secure and Efficient OTA Updates Over Ethernet/IP
+5.	Title: AI-Enabled Unified Diagnostic Services: Ensuring Secure and Efficient OTA Updates Over Ethernet/IP
 	
 	Name of Journal: International Advanced Research Journal in Science, Engineering, and Technology (IARJSET), Vol. 10, Issue 10, October 2023
 
 	Summary: The paper introduces an Ethernet/IP-based Unified Diagnostic Service (UDS) architecture to enhance OTA firmware updates in vehicles. It addresses bandwidth, latency, and security limitations of 	traditional CAN/LIN-based OTA methods. Key features include non-interference with runtime services, enhanced cybersecurity (secure boot, authentication), and ISO-14229 UDS standardization for OEM and 	aftermarket compatibility. The system is tested under various network conditions, demonstrating improved reliability, security, and update speed over existing methods.
+
 	Research Gap :
 	The study lacks AI-driven predictive maintenance for ECU failure detection, intrusion detection systems (IDS) for enhanced cybersecurity, and legacy ECU compatibility with Ethernet/IP updates. It also 	does not address scalability and network reliability challenges for large-scale deployment.
 
