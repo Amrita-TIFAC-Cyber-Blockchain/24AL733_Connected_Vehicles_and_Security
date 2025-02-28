@@ -83,9 +83,14 @@ The methodology involves several steps, including system design, database file (
 ### Mapping to Sustainable Development Goals (SDG)
 
 This project aligns with the following Sustainable Development Goals:
-1.	SDG 9: Industry, Innovation, and Infrastructure: By enhancing communication protocols, the project contributes to the development of innovative automotive systems and infrastructure.
-2.	SDG 11: Sustainable Cities and Communities: Secure and efficient vehicle communication is essential for the development of smart and sustainable transportation systems.
-3.	SDG 13: Climate Action: Improved data transmission and processing efficiency in ADAS systems can lead to reduced fuel consumption and lower carbon emissions.
+
+• SDG 9: Industry, Innovation, and Infrastructure : Enhances automotive communication protocols by implementing CAN-FD, which improves data transmission speed and efficiency. 
+		Strengthening vehicle cybersecurity by integrating encryption and authentication mechanisms, ensuring safe and secure communication between electronic control units (ECUs). 
+
+• SDG 11: Sustainable Cities and Communities: Supporting intelligent and connected transportation by ensuring fast and secure data transmission, which is essential for smart city initiatives. Also, contributing to reliable and secure mobility solutions, which are key components of future urban transportation networks.
+
+• SDG 13: Climate Action: Using CAN-FD instead of classical CAN increases the actual useful data-to-transmitted data ratio (efficiency), allowing larger amounts of data to be sent with less overhead. Since more data is transmitted per message frame, the number of frames needed for communication is reduced, leading to lower power consumption in electronic control units (ECUs), which helps to minimize energy usage in vehicle networks.
+
 
 
 ---
