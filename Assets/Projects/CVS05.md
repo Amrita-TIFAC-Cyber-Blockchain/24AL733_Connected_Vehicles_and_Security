@@ -47,11 +47,17 @@ Protocol Stack: Implementation of key protocols such as HTTPS, MQTT, or CoAP for
 Create a network model with end devices(HPC in an automotive vehicle), routers, and cloud servers.<br>
 Configure secure communication channels using cryptographic protocols.<br>
 
-##### Authentication Flow:
+##### Authentication Flow chart:
+
+![image](https://github.com/user-attachments/assets/bd638764-4c0c-4404-adfd-75b1010d591b)
+
+
+##### Vehicular Authentication Flow:
 Step 1: Vehicle initiates authentication with the cloud server.<br>
 Step 2: Cloud server verifies the vehicle’s identity using certificate-based authentication.<br>
 Step 3: A session key is generated using symmetric cryptography for secure communication.<br>
 Step 4: Data integrity is verified for every packet exchanged during the session.<br>
+
 
 ---
 
