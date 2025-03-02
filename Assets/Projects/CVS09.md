@@ -52,7 +52,8 @@ a lot of manual labor, which increases costs, lengthens downtime, and could dela
 ---
 
 ### Implementation Details
-![image](https://github.com/user-attachments/assets/aa01f82b-fcdc-4d07-b803-2442f4df1562)
+![image](https://github.com/user-attachments/assets/8fb660f2-230e-4751-b06d-f0a6088757b8)
+
 
 
 
