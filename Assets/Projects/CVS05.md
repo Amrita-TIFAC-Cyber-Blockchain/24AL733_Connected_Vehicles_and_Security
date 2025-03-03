@@ -8,23 +8,24 @@
 ![](https://img.shields.io/badge/Reviewed-TBD-brown) 
 
 ### Problem Statement
+<div style="text-align: justify">
 As connected vehicle ecosystems continue to evolve, secure and reliable Vehicle-to-Cloud (V2C) and Vehicle-to-Everything (V2X) communication is essential for enabling real-time data exchange and enhancing smart mobility services. However, these communication systems are highly vulnerable to cyber threats, including unauthorized access, data breaches, and identity spoofing, which can compromise both safety and privacy. To address these challenges, robust mutual authentication mechanisms are required to ensure secure access control, data integrity, and trust in vehicular networks. Anyhow, the security of these communications is paramount and as a necessary result, authentication mechanisms to prevent unauthorized access and ensure data integrity. This project work focuses on Authentication Mechanism and Workflow of cloud-based connected vehicle ecosystems and will be demonstrated by a simulation with the help of CISCO Packet Tracer. 
-
+</div>
 
 ---
 
 ### Literature Survey
+<div style="text-align: justify">
 With the growing adoption of Vehicle-to-Cloud (V2C) and Vehicle-to-Everything (V2X) communication, secure authentication mechanisms are critical to preventing cyber threats such as unauthorized access, data tampering, and replay attacks. Various authentication strategies have been proposed to enhance security in connected vehicle ecosystems.
 ##### Certificate-Based Authentication (PKI)
-The IEEE 1609.2 Standard outlines a Public Key Infrastructure (PKI)-based authentication framework for securing vehicular communication through digital certificates, encryption, and message integrity mechanisms [1]. 
+The IEEE 1609.2 Standard outlines a Public Key Infrastructure (PKI)-based authentication framework for securing vehicular communication through digital certificates, encryption, and message integrity mechanisms (IEEE, 2016).
 ##### Symmetric and Lightweight Authentication protocols
-Recent studies have explored lightweight authentication mechanisms to reduce computational overhead while maintaining security.
-Hasan et al. [2] reviewed various mobile security authentication mechanisms, emphasizing the importance of low-latency cryptographic approaches tailored for resource-constrained vehicular systems.
-Mugunthan et al. [3] proposed VAuth, a lightweight mutual authentication protocol designed for VANETs, ensuring user anonymity while being efficient enough for FPGA-based implementations.
+Recent studies have explored lightweight authentication mechanisms to reduce computational overhead while maintaining security. Hasan et al. (2025) reviewed various mobile security authentication mechanisms, emphasizing the importance of low-latency cryptographic approaches tailored for resource-constrained vehicular systems. Mugunthan et al. (2024) proposed VAuth, a lightweight mutual authentication protocol designed for VANETs, ensuring user anonymity while being efficient enough for FPGA-based implementations.
 
 ##### Cloud-Based Authentication
-Centralized cloud servers authenticate vehicles and manage session keys. Abbasinezhad-Mood et al. [4] introduced a dual-signature blockchain-based key-sharing protocol for secure vehicle-to-vehicle (V2V) authentication. This protocol is tailored for multi-domain Internet of Vehicles (IoV) environments, addressing security risks in cross-domain authentication scenarios.
+Centralized cloud servers authenticate vehicles and manage session keys. Abbasinezhad-Mood et al. (2024) introduced a dual-signature blockchain-based key-sharing protocol for secure vehicle-to-vehicle (V2V) authentication. This protocol is tailored for multi-domain Internet of Vehicles (IoV) environments, addressing security risks in cross-domain authentication scenarios.
 
+<div>
 
 ---
 
@@ -76,8 +77,13 @@ By ensuring secure communication in cloud-based connected vehicle ecosystems, th
 ---
 
 ### References
-[1] "IEEE Standard for Wireless Access in Vehicular Environments--Security Services for Applications and Management Messages," in IEEE Std 1609.2-2016 (Revision of IEEE Std 1609.2-2013) , vol., no., pp.1-240, 1 March 2016, doi: 10.1109/IEEESTD.2016.7426684.<br>
-[2] Hasan, S.S.U.; Ghani, A.; Daud, A.; Akbar, H.; Khan, M.F. A Review on Secure Authentication Mechanisms for Mobile Security. Sensors 2025, 25, 700. https://doi.org/10.3390/s25030700 <br>
-[3] S. Mugunthan, V. Sureshkumar, P. Saravanan and R. Amin, "VAuth: Robust Lightweight Mutual Authentication Protocol Preserving User’s Anonymity for VANET With FPGA Implementation," in IEEE Transactions on Intelligent Transportation Systems, vol. 25, no. 12, pp. 21097-21106, Dec. 2024, doi: 10.1109/TITS.2024.3461838.<br>
-[4] D. Abbasinezhad-Mood and H. Ghaemi, "Dual-Signature Blockchain-Based Key Sharing Protocol for Secure V2V Communications in Multi-Domain IoV Environments," in IEEE Transactions on Intelligent Transportation Systems, vol. 25, no. 10, pp. 13407-13416, Oct. 2024, doi: 10.1109/TITS.2024.3410114.<br>
-[5] A. Aljumaili, H. Trabelsi, W. Jerbi and R. Hazim, "Implementing Cryptographic Mechanisms with IRS for Enhancing an Internet of Vehicles," 2024 IEEE 7th International Conference on Computer and Communication Engineering Technology (CCET), Beijing, China, 2024, pp. 185-194, doi: 10.1109/CCET62233.2024.10837706.<br>
+IEEE. (2016). IEEE standard for wireless access in vehicular environments--security services for applications and management messages (IEEE Std 1609.2-2016, Revision of IEEE Std 1609.2-2013). https://doi.org/10.1109/IEEESTD.2016.7426684<br>
+
+Hasan, S. S. U., Ghani, A., Daud, A., Akbar, H., & Khan, M. F. (2025). A review on secure authentication mechanisms for mobile security. Sensors, 25(3), 700. https://doi.org/10.3390/s25030700<br>
+
+Mugunthan, S., Sureshkumar, V., Saravanan, P., & Amin, R. (2024). VAuth: Robust lightweight mutual authentication protocol preserving user’s anonymity for VANET with FPGA implementation. IEEE Transactions on Intelligent Transportation Systems, 25(12), 21097–21106. https://doi.org/10.1109/TITS.2024.3461838<br>
+
+Abbasinezhad-Mood, D., & Ghaemi, H. (2024). Dual-signature blockchain-based key sharing protocol for secure V2V communications in multi-domain IoV environments. IEEE Transactions on Intelligent Transportation Systems, 25(10), 13407–13416. https://doi.org/10.1109/TITS.2024.3410114<br>
+
+Aljumaili, A., Trabelsi, H., Jerbi, W., & Hazim, R. (2024). Implementing cryptographic mechanisms with IRS for enhancing an internet of vehicles. 2024 IEEE 7th International Conference on Computer and Communication Engineering Technology (CCET), Beijing, China, 185–194. https://doi.org/10.1109/CCET62233.2024.10837706
+
