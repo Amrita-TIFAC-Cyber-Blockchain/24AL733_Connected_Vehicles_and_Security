@@ -15,7 +15,7 @@ As connected vehicle ecosystems continue to evolve, secure and reliable Vehicle-
 ---
 
 ### Literature Survey
-<div style="text-align: justify">
+
 With the growing adoption of Vehicle-to-Cloud (V2C) and Vehicle-to-Everything (V2X) communication, secure authentication mechanisms are critical to preventing cyber threats such as unauthorized access, data tampering, and replay attacks. Various authentication strategies have been proposed to enhance security in connected vehicle ecosystems.
 ##### Certificate-Based Authentication (PKI)
 The IEEE 1609.2 Standard outlines a Public Key Infrastructure (PKI)-based authentication framework for securing vehicular communication through digital certificates, encryption, and message integrity mechanisms (IEEE, 2016).
@@ -24,8 +24,6 @@ Recent studies have explored lightweight authentication mechanisms to reduce com
 
 ##### Cloud-Based Authentication
 Centralized cloud servers authenticate vehicles and manage session keys. Abbasinezhad-Mood et al. (2024) introduced a dual-signature blockchain-based key-sharing protocol for secure vehicle-to-vehicle (V2V) authentication. This protocol is tailored for multi-domain Internet of Vehicles (IoV) environments, addressing security risks in cross-domain authentication scenarios.
-
-<div>
 
 ---
 
