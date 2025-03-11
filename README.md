@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="https://github.com/Amrita-TIFAC-Cyber-Blockchain/.github/blob/main/profile/img/AVV_CYS_Logo.png" alt ="Amrita TIFAC" width="700" />
+</p>
+
 # 24AL733 - Connected Vehicles and Security 
 ![](https://img.shields.io/badge/PG-blue) ![](https://img.shields.io/badge/Subject-CVS-blue) <br/>
 ![](https://img.shields.io/badge/Lecture-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) <br/> ![](https://img.shields.io/badge/Students-10-gold)
@@ -65,13 +69,13 @@
 
 ### Dates and Deadlines
 
-| Course Start | 11 - Dec - 2024 |
-|--------------|-----------------|
-| Mini-Project Problem Statement Submission | 01 - Jan - 2025 | 
-| Quiz - 1	  |  31 - Jan - 2025 |
-| Mid-Term Examination |	07 - Feb - 2025 |
-| Review - 0 | 14 - Feb - 2025 to 20 - Feb - 2025 |
-| Review - 1 | 03 - Mar - 2025 |
+| Course Start | 11 - Dec - 2024 | Deadline | 
+|--------------|-----------------|:--------:|
+| Mini-Project Problem Statement Submission | 01 - Jan - 2025 | ![](https://img.shields.io/badge/Completed-darkgreen) | 
+| Quiz - 1	  |  31 - Jan - 2025 | ![](https://img.shields.io/badge/Completed-darkgreen) | 
+| Mid-Term Examination |	07 - Feb - 2025 | ![](https://img.shields.io/badge/Completed-darkgreen) | 
+| Review - 0 | 14 - Feb - 2025 to 20 - Feb - 2025 | ![](https://img.shields.io/badge/Completed-darkgreen) | 
+| Review - 1 | 03 - Mar - 2025 | 
 | Quiz - 2	  |  04 - Mar - 2025 |
 | Review - 2 | 19 - Mar - 2025 |
 | Quiz - 3 | 26 - Mar - 2025 | 
