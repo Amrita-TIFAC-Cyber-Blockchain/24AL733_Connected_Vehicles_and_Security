@@ -23,19 +23,19 @@
 #### CAN
 
 <p align="center">
-  <img src="images/CAN_Frame.png" width=600 />
+  <img src="../images/CAN_Frame.png" width=600 />
 </p>
 
 #### CAN-FD
 
 <p align="center">
-  <img src="images/CAN-FD_Frame.png" width=600 />
+  <img src="../images/CAN-FD_Frame.png" width=600 />
 </p>
 
 #### CAN-XL
 
 <p align="center">
-  <img src="images/CAN-XL_Frame.png" width=600 />
+  <img src="../images/CAN-XL_Frame.png" width=600 />
 </p>
 
 ###### Image Source:[HMS-Networks](https://www.hms-networks.com/industrial-iot-blog/blogpost/hms-blog/2024/06/18/can-can-fd-can-xl-what-are-the-differences)
