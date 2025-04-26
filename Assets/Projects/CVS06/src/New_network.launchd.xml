@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!--debug config-->
+<launch>
+	<copy file="newNetwork.net.xml"/>
+	<copy file="NewRoute.rou.xml"/>
+	<copy file="network.sumocfg" type="config"/>
+</launch>
