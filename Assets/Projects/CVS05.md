@@ -5,7 +5,7 @@
 ## CVS#05 - Authentication Mechanism and Workflow using CISCO Packet Tracer
 ![](https://img.shields.io/badge/Member-Pathan_Zubair_Khan-gold) <br/> 
 ![](https://img.shields.io/badge/SDG-TBD-darkgreen) <br/> 
-![](https://img.shields.io/badge/Reviewed-TBD-brown) 
+![](https://img.shields.io/badge/Reviewed-26_Apr-brown)
 
 ### Problem Statement
 <div style="text-align: justify">
@@ -48,7 +48,9 @@ Configure secure communication channels using cryptographic protocols.<br>
 
 ##### Authentication Flow chart:
 
-![image](https://github.com/user-attachments/assets/bd638764-4c0c-4404-adfd-75b1010d591b)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/bd638764-4c0c-4404-adfd-75b1010d591b" width=600 />
+</p
 
 
 ##### Vehicular Authentication Flow:
@@ -75,13 +77,13 @@ By ensuring secure communication in cloud-based connected vehicle ecosystems, th
 ---
 
 ### References
-IEEE. (2016). IEEE standard for wireless access in vehicular environments--security services for applications and management messages (IEEE Std 1609.2-2016, Revision of IEEE Std 1609.2-2013). https://doi.org/10.1109/IEEESTD.2016.7426684<br>
+- IEEE. (2016). IEEE standard for wireless access in vehicular environments--security services for applications and management messages (IEEE Std 1609.2-2016, Revision of IEEE Std 1609.2-2013). https://doi.org/10.1109/IEEESTD.2016.7426684<br>
 
-Hasan, S. S. U., Ghani, A., Daud, A., Akbar, H., & Khan, M. F. (2025). A review on secure authentication mechanisms for mobile security. Sensors, 25(3), 700. https://doi.org/10.3390/s25030700<br>
+- Hasan, S. S. U., Ghani, A., Daud, A., Akbar, H., & Khan, M. F. (2025). A review on secure authentication mechanisms for mobile security. Sensors, 25(3), 700. https://doi.org/10.3390/s25030700<br>
 
-Mugunthan, S., Sureshkumar, V., Saravanan, P., & Amin, R. (2024). VAuth: Robust lightweight mutual authentication protocol preserving user’s anonymity for VANET with FPGA implementation. IEEE Transactions on Intelligent Transportation Systems, 25(12), 21097–21106. https://doi.org/10.1109/TITS.2024.3461838<br>
+- Mugunthan, S., Sureshkumar, V., Saravanan, P., & Amin, R. (2024). VAuth: Robust lightweight mutual authentication protocol preserving user’s anonymity for VANET with FPGA implementation. IEEE Transactions on Intelligent Transportation Systems, 25(12), 21097–21106. https://doi.org/10.1109/TITS.2024.3461838<br>
 
-Abbasinezhad-Mood, D., & Ghaemi, H. (2024). Dual-signature blockchain-based key sharing protocol for secure V2V communications in multi-domain IoV environments. IEEE Transactions on Intelligent Transportation Systems, 25(10), 13407–13416. https://doi.org/10.1109/TITS.2024.3410114<br>
+- Abbasinezhad-Mood, D., & Ghaemi, H. (2024). Dual-signature blockchain-based key sharing protocol for secure V2V communications in multi-domain IoV environments. IEEE Transactions on Intelligent Transportation Systems, 25(10), 13407–13416. https://doi.org/10.1109/TITS.2024.3410114<br>
 
-Aljumaili, A., Trabelsi, H., Jerbi, W., & Hazim, R. (2024). Implementing cryptographic mechanisms with IRS for enhancing an internet of vehicles. 2024 IEEE 7th International Conference on Computer and Communication Engineering Technology (CCET), Beijing, China, 185–194. https://doi.org/10.1109/CCET62233.2024.10837706
+- Aljumaili, A., Trabelsi, H., Jerbi, W., & Hazim, R. (2024). Implementing cryptographic mechanisms with IRS for enhancing an internet of vehicles. 2024 IEEE 7th International Conference on Computer and Communication Engineering Technology (CCET), Beijing, China, 185–194. https://doi.org/10.1109/CCET62233.2024.10837706
 
