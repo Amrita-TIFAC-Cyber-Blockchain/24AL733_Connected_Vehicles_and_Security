@@ -5,15 +5,13 @@
 ## CVS#09 - DevOps/CICD with OTA
 ![](https://img.shields.io/badge/Member-Syed_Ameenul-gold) <br/> 
 ![](https://img.shields.io/badge/SDG-TBD-darkgreen) <br/> 
-![](https://img.shields.io/badge/Reviewed-TBD-brown) 
+![](https://img.shields.io/badge/Reviewed-26_Apr-brown) 
 
 ### Problem Statement
   In the rapidly evolving automotive industry, software-defined vehicles need reliable and seamless software update deployment systems to ensure customer satisfaction, security, and functionality. However, the traditional method of updating automotive software requires
 a lot of manual labor, which increases costs, lengthens downtime, and could delay the delivery of crucial updates.
 
   Furthermore, the lack of a standardized framework for efficiently deploying and testing new features in automotive ECUs (Electronic Control Units) makes it difficult for Original Equipment Manufacturers (OEMs) and developers to maintain high software quality and responsiveness.
-
-
 
 ---
 
@@ -39,7 +37,6 @@ a lot of manual labor, which increases costs, lengthens downtime, and could dela
 **Summary:** To design and execute a Raspberry Pi-based automated Jenkins pipeline for controlling block units (such as motors, temperature sensors, and other appliances) for contemporary industrial applications. The solution combines the Raspberry Pi with Jenkins, a potent automation tool, to support continuous integration and delivery (CI/CD) procedures and provide flexible and effective control over a variety of devices.<br/>
 **Research Gap:** Real world considerations & Security.<br/>
 
-
 ---
 
 ### Proposed Work
@@ -52,15 +49,23 @@ a lot of manual labor, which increases costs, lengthens downtime, and could dela
 ---
 
 ### Implementation Details
-![image](https://github.com/user-attachments/assets/8fb660f2-230e-4751-b06d-f0a6088757b8)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8fb660f2-230e-4751-b06d-f0a6088757b8" width=800/>
+</p>
 
+---
 
+### Demo Videos
 
 
 ---
 
+### Mapping the Project to Relevant Sustainable Development Goals (SDGs)
 
-### Mapping to Sustainable Development Goals (SDG)
+| SDG        | Alignment                                                                         |
+|:-----------|:----------------------------------------------------------------------------------|
+| *Goal 3 - Good Health and Well-Being*  | Reduces delays caused by traffic congestion, improving response times and lowering fatalities from accidents. Enhances universal access to timely emergency medical care. |
+| *Goal 9 - Industry, Innovation, and Infrastructure* | Supports sustainable and resilient infrastructure through the integration of IoT for emergency medical services. Advances innovation in IoT-enabled emergency response systems. |
 
 
 ---
