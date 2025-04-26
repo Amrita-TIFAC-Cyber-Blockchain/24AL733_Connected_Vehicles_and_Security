@@ -7,7 +7,7 @@
 
 ![](https://img.shields.io/badge/Member-Shashank_R-gold) <br/>
 ![](https://img.shields.io/badge/SDG-TBD-darkgreen) <br/>
-![](https://img.shields.io/badge/Reviewed-17th_Feb_2025-brown)
+![](https://img.shields.io/badge/Reviewed-17_Feb-brown) ![](https://img.shields.io/badge/Reviewed-26_Apr-brown)
 
 ### Problem Statement
 
@@ -192,9 +192,12 @@ The development and optimization of 5G-V2X systems rely heavily on advanced simu
 
 ---
 
-### Mapping to Sustainable Development Goals (SDG)
+### Mapping the Project to Relevant Sustainable Development Goals (SDGs)
 
-The proposed 5G-enabled V2X framework aligns with multiple SDGs by addressing critical issues such as road safety, urban sustainability, climate change, and technological innovation. By integrating cutting-edge communication technologies with sustainable practices, this framework contributes to the creation of a smarter, safer, and greener transportation ecosystem. It also establishes a foundation for global partnerships and knowledge exchange, driving progress toward achieving the SDGs
+| SDG        | Alignment                                                                         |
+|:-----------|:----------------------------------------------------------------------------------|
+| *Goal 3 - Good Health and Well-Being*  | Reduces delays caused by traffic congestion, improving response times and lowering fatalities from accidents. Enhances universal access to timely emergency medical care. |
+| *Goal 9 - Industry, Innovation, and Infrastructure* | Supports sustainable and resilient infrastructure through the integration of IoT for emergency medical services. Advances innovation in IoT-enabled emergency response systems. |
 
 ---
 
