@@ -3,14 +3,12 @@
 ![](https://img.shields.io/badge/Lecture-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) 
 
 ## CVS#06 - Threats in V2I Communications
-![](https://img.shields.io/badge/Member-Sakshi_Ganpat_Jadhav-gold) <br/> 
+![](https://img.shields.io/badge/Student-Sakshi_Ganpat_Jadhav-gold) <br/> 
 ![](https://img.shields.io/badge/SDG-TBD-darkgreen) <br/> 
-![](https://img.shields.io/badge/Reviewed-TBD-brown) 
+![](https://img.shields.io/badge/Reviewed-26_Apr-brown) 
 
 ### Problem Statement
 Vehicle-to-Infrastructure communications and larger vehicular networks are facing an ever-increasing cybersecurity threat such as denial-of-service attacks, message tampering, and Man-In-the-middle which begin to erode system reliability and user privacy. Conventional cryptography is becoming more and more vulnerable to the rise of quantum computing, initiating the necessity of developing quantum-secure security frameworks. Quantum Key Distribution is capable of offering theoretically unbreakable encryption for secure key exchanges, while Quantum Machine Learning is designed to address real-time threat detection and anomaly identification in Intelligent Transportation Systems. Integration of QKD and QML into V2I communication poses challenges in terms of scalability, computational overhead, and real-time adaptability. This is where efficient quantum-secure architectures that guarantee a robust, privacy-preserving, and future-proof security solution for connected vehicle networks need to be created.
-
-
 
 ---
 
@@ -26,9 +24,11 @@ The paper will dissect the role of Free-Space Optical Quantum Key Distribution i
 ### Proposed Work
 For now, to detect attacks like MITM and DDoS, QML would be the ideal solution. For prevention, which is the next step, QKD would be a better option, as other existing detection and prevention algorithms have vulnerabilities that can lead to attacks.  
 For example, in V2I communication, vehicles need to communicate with RSUs in real time and at high speed. In such scenarios, RSA and ECC are computationally intensive and take significant time to generate and verify keys, which is the core process of RSA and ECC. This delay can slow down real-time attack detection. In contrast, QKD and QML offer faster and more efficient security mechanisms.
+
 <p align="center">
-  <img src="../images/COMPARISON.png" width=400/>
+  <img src="../images/COMPARISON.png" width=600/>
 </p>
+
 1. RSA (Rivest-Shamir-Adleman) – A widely used public-key cryptosystem but insecure against quantum attacks due to Shor’s algorithm.<br>
 2. Diffie-Hellman – A key exchange protocol vulnerable to quantum computers, which can efficiently solve its discrete logarithm problem.<br>
 3. ECC (Elliptic Curve Cryptography) – A public-key cryptosystem that is more efficient than RSA but still insecure against quantum attacks.<br>
@@ -42,38 +42,51 @@ For example, in V2I communication, vehicles need to communicate with RSUs in rea
 
 ---
 
-
-
 ### Tools:
 1. OMNeT++ (5.2 version)
 2. SUMO (latest version)
 3. Veins Framework (latest version)
 4. Python (for QML-based attack detection)
+   
+---
 
  ### Methodology 
  Methodology for Quantum-Based Attack Detection & Prevention in V2I Communication
 1.	System Architecture Design
-•	Define the Vehicle-to-Infrastructure (V2I) communication model using Simulink & VEINS.
-•	Identify the key components: 
-o	Vehicle Communication Unit (VCU) (Simulated vehicle)
-o	Roadside Unit (RSU) (Infrastructure communication node)
-o	Attacker Model (Simulated cyberattacks)
-o	Intrusion Detection System (IDS) (Quantum-based anomaly detection)
-•	Integrate QKD for secure key exchange.
+  •	Define the Vehicle-to-Infrastructure (V2I) communication model using Simulink & VEINS.
+  •	Identify the key components: 
+    o	Vehicle Communication Unit (VCU) (Simulated vehicle)
+    o	Roadside Unit (RSU) (Infrastructure communication node)
+    o	Attacker Model (Simulated cyberattacks)
+    o	Intrusion Detection System (IDS) (Quantum-based anomaly detection)
+    •	Integrate QKD for secure key exchange.
 
 2.	Attack Simulation in Simulink & VEINS
-•	Simulate a V2I network with OMNeT++, SUMO, and VEINS.
-•	Inject cyberattacks to test detection capabilities: 
-o	Denial of Service (DoS) (Overloading RSU)
-o	Man-in-the-Middle (MITM) (Intercepting vehicle messages)
-•	Monitor packet transmission delays, abnormal behavior, unauthorized messages.
+  •	Simulate a V2I network with OMNeT++, SUMO, and VEINS.
+  •	Inject cyberattacks to test detection capabilities: 
+    o	Denial of Service (DoS) (Overloading RSU)
+    o	Man-in-the-Middle (MITM) (Intercepting vehicle messages)
+    •	Monitor packet transmission delays, abnormal behavior, unauthorized messages.
+  	
+---
+
+### Demo Videos
 
 
 
 ---
 
+### Mapping the Project to Relevant Sustainable Development Goals (SDGs)
+
+| SDG        | Alignment                                                                         |
+|:-----------|:----------------------------------------------------------------------------------|
+| *Goal 3 - Good Health and Well-Being*  | Reduces delays caused by traffic congestion, improving response times and lowering fatalities from accidents. Enhances universal access to timely emergency medical care. |
+| *Goal 9 - Industry, Innovation, and Infrastructure* | Supports sustainable and resilient infrastructure through the integration of IoT for emergency medical services. Advances innovation in IoT-enabled emergency response systems. |
+
+---
+
 ### References
-1. https://www.mdpi.com/2624-8921/5/4/86
+1. Fowler, D. S., Maple, C., & Epiphaniou, G. (2023, November 4). A Practical Implementation of Quantum-Derived Keys for Secure Vehicle-to-Infrastructure Communications. Vehicles. MDPI AG. http://doi.org/10.3390/vehicles5040086
 2. https://ieeexplore.ieee.org/document/10713122
 3. https://ieeexplore.ieee.org/document/9684555
 
