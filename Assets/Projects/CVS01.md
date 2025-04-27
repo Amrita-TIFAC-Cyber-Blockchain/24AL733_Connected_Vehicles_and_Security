@@ -79,6 +79,7 @@ The methodology involves several steps, including system design, database file (
 
 ---
 
+![Screenshot 2025-02-28 200612](https://github.com/user-attachments/assets/565da2a5-94c4-4fd9-8f6d-a120fb35e660)
 
 ### Mapping to Sustainable Development Goals (SDG)
 
