@@ -1,0 +1,70 @@
+/*@!Encoding:1252*/
+// ============================
+//  BCM Variables and Messages
+// ============================
+variables  
+{  
+  message Remote_Door_Request msg_DoorRequest;    // CAN ID 0x200 (TCU ? BCM)  
+  message Door_Status_Update_BCM msg_DoorStatus; // CAN ID 0x201 (BCM ? TCU)  
+  message Status_Notification_BCM msg_ErrorNotif; // CAN ID 0x202 (BCM ? TCU)  
+  int VehicleSpeed_BCM = 100; // Simulated Vehicle Speed inside BCM  
+  int DoorStatus_BCM = 0;   // Initially Unlocked (0 = Unlock, 1 = Lock)  
+
+  msTimer T1; // Timer for periodic door status transmission  
+}
+
+// ============================
+//  BCM Receives Remote Door Request from TCU
+// ============================
+
+on message Remote_Door_Request  
+{  
+  int DoorCmd;  // Extract DoorCmd from received message  
+  DoorCmd = (int)this.byte(0);  
+
+  write("BCM: Received Remote Door Request - %d", DoorCmd);  
+
+  // Check if vehicle is moving  
+  if (VehicleSpeed_BCM > 0)  
+  {  
+    msg_ErrorNotif.byte(0) = 0x1; // Operation_Failed (0x1)  
+    output(msg_ErrorNotif);  
+    write("BCM: Vehicle is moving! Request Denied. Sending Operation_Failed.");  
+  }  
+  else  
+  {  
+    // Process request if vehicle is stationary  
+    DoorStatus_BCM = DoorCmd;  
+
+    // Send Door Status Update to TCU  
+    msg_DoorStatus.byte(0) = (byte)DoorStatus_BCM;  
+    output(msg_DoorStatus);  
+    write("BCM: Door status updated to %d (0 = Unlocked, 1 = Locked)", DoorStatus_BCM);  
+
+    // Send Status Notification (Operation_Successful)  
+    msg_ErrorNotif.byte(0) = 0x0; // Operation_Successful (0x0)  
+    output(msg_ErrorNotif);  
+    write("BCM: Sending Operation_Successful notification.");  
+  }  
+}
+
+// ============================
+//  BCM Sends Periodic Status Updates
+// ============================
+
+on start  
+{  
+  write("BCM: Simulation Started. Initializing...");  
+  setTimer(T1, 1000); // Start periodic timer (every 2 seconds)  
+}
+
+on timer T1  
+{  
+  setTimer(T1, 1000); // Restart timer  
+  write("? BCM: Sending Periodic Status Update - Door Status: %d", DoorStatus_BCM);  
+
+  msg_DoorStatus.byte(0) = (byte)DoorStatus_BCM;  
+  output(msg_DoorStatus);  
+
+  write("BCM: Periodic Door Status Update - %d", DoorStatus_BCM);  
+}

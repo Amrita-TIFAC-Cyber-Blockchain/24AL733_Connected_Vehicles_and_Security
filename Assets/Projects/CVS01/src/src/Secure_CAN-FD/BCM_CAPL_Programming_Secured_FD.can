@@ -1,0 +1,97 @@
+/*@!Encoding:1252*/
+variables {  
+  message Encrypted_DoorCmd msg_EncryptedRequest;  
+  message Door_Status_Update_BCM_FD msg_DoorStatus;  
+  message Status_Notification_BCM_FD msg_ErrorNotif;  
+
+  byte receivedData[24];  
+  dword fileHandle;
+  char buffer[64];  
+  msTimer processTimer;
+  msTimer T1;  
+  
+}
+
+// Function to save received encrypted data
+void saveReceivedData() {
+  int i;
+  fileHandle = openFileWrite("C:/Users/CB.EN.P2AEL24003/Desktop/Mait/CVS/New_ProjectWork/Secured_CAN-FD/received_data.bin", 0);
+  //fileHandle = openFileWrite("D:/py_capl/received_data.bin", 0);
+  
+  
+  
+  
+  if (fileHandle != 0) {
+    for (i = 0; i < 24; i++) {
+      buffer[0] = receivedData[i];  
+      buffer[1] = '\n';  
+      buffer[2] = '\0';  
+      filePutString(buffer, 64, fileHandle);  
+    }
+    fileClose(fileHandle);
+    //sysExecCmd("start /B python C:/Users/CB.EN.P2AEL24003/Desktop/Mait/CVS/New_ProjectWork/Secured_CAN-FD/bcm_script11.py", "");  
+    sysExecCmd("start /B python C:/Users/CB.EN.P2AEL24003/Desktop/Mait/CVS/New_ProjectWork/Secured_CAN-FD/bcm_script11.py", ""); 
+    setTimer(processTimer, 1000);  
+  }
+  else if (fileHandle == 0) {
+    write("!! ERROR: Could not create received_data.bin");
+    //return;
+  }
+}
+
+// Timer to process decrypted output
+on timer processTimer {
+  int msg_id, DoorCmd;
+  long result;
+
+  fileHandle = openFileRead("C:/Users/CB.EN.P2AEL24003/Desktop/Mait/CVS/New_ProjectWork/Secured_CAN-FD/bcm_output.txt", 0);
+  //fileHandle = openFileRead("D:/py_capl/bcm_output.txt", 0);
+  
+  if (fileHandle != 0) {
+    if (fileGetString(buffer, 64, fileHandle) != 0) {  
+      strtol(buffer, 0, result);
+      msg_id = (int) result;
+      
+      if (fileGetString(buffer, 64, fileHandle) != 0) {  
+        strtol(buffer, 0, result);
+        DoorCmd = (int) result;
+        processDoorRequest(DoorCmd);
+      }
+    }
+    fileClose(fileHandle);
+  }
+}
+
+// Process door request
+void processDoorRequest(int DoorCmd) {
+  msg_DoorStatus.byte(0) = (byte)DoorCmd;  
+  output(msg_DoorStatus);  
+  msg_ErrorNotif.byte(0) = 0x0; 
+  output(msg_ErrorNotif);  
+}
+
+// BCM receives encrypted message
+on message Encrypted_DoorCmd {
+  int i;
+  write("?? BCM: Encrypted Message RECEIVED!");
+  for (i = 0; i < 24; i++) {
+    receivedData[i] = this.byte(i);
+  }
+  
+  write("?? BCM: Write is successful");
+  
+  saveReceivedData();
+}
+
+// Start event
+on start {  
+  setTimer(T1, 1000);  
+}
+
+// Periodic status update
+on timer T1 {  
+  setTimer(T1, 1000);  
+  write("?? BCM: Sending Periodic Status Update");
+  msg_DoorStatus.byte(0) = 0;  
+  output(msg_DoorStatus);  
+}

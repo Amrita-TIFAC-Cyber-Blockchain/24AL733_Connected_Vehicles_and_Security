@@ -1,0 +1,81 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BCM_F TCU_F
+VAL_TABLE_ Status_Notification_FD 1 "Operation_Failed" 0 "Operation_Successful" ;
+VAL_TABLE_ Remote_Door_request_VTable_FD 1 "Lock" 0 "Unlock" ;
+VAL_TABLE_ Current_Door_Status_Value_FD 1 "Currently_Locked" 0 "Currently_Unlocked" ;
+
+
+BO_ 772 Status_Notification_BCM_FD: 8 BCM_F
+ SG_ Operation_Status_Signal : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 770 Door_Status_Update_BCM_FD: 8 BCM_F
+ SG_ DoorStatus_FD : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 768 Remote_Door_Request_FD: 8 TCU_F
+ SG_ Door_Cmd_FD : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_ "BusType" "CAN FD";
+BA_ "DBName" "RDL_RDU__DataBaseFile_CAN_FD";
+BA_ "VFrameFormat" BO_ 772 14;
+BA_ "VFrameFormat" BO_ 770 14;
+BA_ "VFrameFormat" BO_ 768 14;
+VAL_ 772 Operation_Status_Signal 1 "Operation_Failed" 0 "Operation_Successful" ;
+VAL_ 770 DoorStatus_FD 1 "Currently_Locked" 0 "Currently_Unlocked" ;
+VAL_ 768 Door_Cmd_FD 1 "Lock" 0 "Unlock" ;
+
