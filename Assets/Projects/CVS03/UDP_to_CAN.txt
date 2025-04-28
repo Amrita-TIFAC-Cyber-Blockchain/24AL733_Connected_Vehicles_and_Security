@@ -1,0 +1,32 @@
+import socket
+import can
+
+# CAN interface setup
+can_interface = 'can0'  # Replace with your CAN interface name
+bus = can.interface.Bus(can_interface, bustype='socketcan')
+
+# UDP socket setup
+udp_ip = '127.0.0.1'  # Replace with the desired IP address
+udp_port = 5005  # Replace with the desired port
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+try:
+    while True:
+        # Read CAN message
+        message = bus.recv()
+
+        if message is not None:
+            # Prepare data for UDP
+            can_id = message.arbitration_id
+            can_data = message.data
+            udp_data = f"{can_id}:{can_data.hex()}".encode('utf-8')
+
+            # Send UDP packet
+            sock.sendto(udp_data, (udp_ip, udp_port))
+            print(f"Sent to {udp_ip}:{udp_port}: {udp_data}")
+
+except KeyboardInterrupt:
+    print("Exiting...")
+finally:
+    bus.shutdown()
+    sock.close()
