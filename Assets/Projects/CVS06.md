@@ -43,10 +43,10 @@ For example, in V2I communication, vehicles need to communicate with RSUs in rea
 ---
 
 ### Tools:
-1. OMNeT++ (5.2 version)
-2. SUMO (latest version)
-3. Veins Framework (latest version)
-4. Python (for QML-based attack detection)
+1. OMNeT++ (5.2 version,5.6.2 Version, for windows- 6.0.1 Version)
+2. SUMO (1.22.0(Ubuntu),1.10.2(Windows))
+3. Veins Framework (5.2 version for both Ubuntu and Windows)
+4. Python (3.9 Version)
    
 ---
 
@@ -80,13 +80,14 @@ For example, in V2I communication, vehicles need to communicate with RSUs in rea
 
 | SDG        | Alignment                                                                         |
 |:-----------|:----------------------------------------------------------------------------------|
-| *Goal 3 - Good Health and Well-Being*  | Reduces delays caused by traffic congestion, improving response times and lowering fatalities from accidents. Enhances universal access to timely emergency medical care. |
-| *Goal 9 - Industry, Innovation, and Infrastructure* | Supports sustainable and resilient infrastructure through the integration of IoT for emergency medical services. Advances innovation in IoT-enabled emergency response systems. |
+| *SDG 9 - Industry, Innovation and Infrastructure*  | This project promotes technological innovation (quantum-secured communication) and contributes to building resilient, secure infrastructure for intelligent transportation systems. |
+| *SDG 11 - Sustainable Cities and Communities* | Enhancing V2I security through quantum keys supports safer, smarter urban mobility, helping cities become safer and more sustainable. |
+| *SDG 16 - Peace, Justice and Strong Institutions* | By strengthening cybersecurity (through quantum cryptography), the project contributes to building trustworthy digital infrastructure critical for public trust. |
 
 ---
 
 ### References
 1. Fowler, D. S., Maple, C., & Epiphaniou, G. (2023, November 4). A Practical Implementation of Quantum-Derived Keys for Secure Vehicle-to-Infrastructure Communications. Vehicles. MDPI AG. http://doi.org/10.3390/vehicles5040086
-2. https://ieeexplore.ieee.org/document/10713122
-3. https://ieeexplore.ieee.org/document/9684555
+2. Davidson, Z. C. M., Hugues-Salas, E., Bonner, G. M., Jones, B. E., Prentice, J., Kariappa, S., Fowler, D. S., Oliveira, R. D., Zhang, P., Andersson, Y., Kosmatos, E. A., Stavdas, A., & Lord, A. (2024, October 1). AirQKD: The Role of Free-Space Optics Quantum Key Distribution Enabling Pragmatic Secure and Scalable Communications. IEEE Communications Magazine. IEEE. https://ieeexplore.ieee.org/document/10713122
+3.Sasaki, M., Fujiwara, M., Ishizuka, H., Yoshino, K., & Miki, S. (2021, December). The Evolution of Quantum Key Distribution Networks: On the Road to the Qinternet. IEEE Communications Magazine. IEEE. https://ieeexplore.ieee.org/document/9684555
 
