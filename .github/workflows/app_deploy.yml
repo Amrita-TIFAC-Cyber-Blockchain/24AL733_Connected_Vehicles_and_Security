@@ -14,6 +14,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+
       # ✅ Set up QEMU (for cross-platform builds)
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -34,7 +35,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: ${{ secrets.DOC_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       # ✅ Build and Push Docker Image for Raspberry Pi
@@ -55,7 +56,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -H "${{ secrets.RPI_HOST }}" >> ~/.ssh/known_hosts
+          ssh-keyscan -H "${{ secrets.PI_HOST }}" >> ~/.ssh/known_hosts
 
       # ✅ Deploy to Raspberry Pi
       - name: Deploy to Raspberry Pi
