@@ -1,0 +1,95 @@
+/*@!Encoding:1252*/  
+
+// ============================  
+//  TCU Variables and Messages  
+// ============================  
+variables  
+{  
+  message Remote_Door_Request_FD msg_DoorRequest_FD;   // CAN-FD ID 0x300 (TCU ? BCM)  
+  message Door_Status_Update_BCM_FD msg_DoorStatus_FD; // CAN-FD ID 0x302 (BCM ? TCU)  
+  message Status_Notification_BCM_FD msg_ErrorNotif_FD; // CAN-FD ID 0x304 (BCM ? TCU)  
+
+  int DoorStatus_TCU_FD = 0;   // Initially Unlocked (0 = Unlock, 1 = Lock)  
+  msTimer T1;  // Timer for periodic heartbeat  
+}  
+
+// ============================  
+//  Function to Send Remote Door Request  
+// ============================  
+
+void sendDoorRequestFD(int DoorCmd)  
+{  
+  // Check if request is redundant  
+  if (DoorCmd == DoorStatus_TCU_FD)  
+  {  
+    write("ERROR: Request Ignored! Door is already %d (0 = Unlocked, 1 = Locked)", DoorStatus_TCU_FD);  
+    return;  
+  }  
+
+  // Send Door Lock/Unlock Request  
+  msg_DoorRequest_FD.byte(0) = (byte)DoorCmd;    
+  output(msg_DoorRequest_FD);  
+
+  write("TCU: Sent Remote Door Request (CAN-FD) - %d", DoorCmd);  
+}  
+
+// ============================  
+//  Initialize Simulation  
+// ============================  
+
+on start  
+{  
+  write("TCU: CAN-FD Simulation Started.");  
+  setTimer(T1, 1000); // Start periodic heartbeat  
+
+  // Initial door status broadcast  
+  msg_DoorRequest_FD.byte(0) = DoorStatus_TCU_FD; // Set the initial status  
+  output(msg_DoorRequest_FD); // Send initial message 
+}  
+
+// ============================  
+//  Periodic Heartbeat Signal  
+// ============================  
+on timer T1  
+{  
+  setTimer(T1, 1000); // Restart timer  
+  write("DEBUG: Heartbeat - Current Door Status: %d", DoorStatus_TCU_FD);  
+
+  // Send current door status as heartbeat
+  msg_DoorRequest_FD.byte(0) = DoorStatus_TCU_FD;
+  output(msg_DoorRequest_FD);
+
+  write("TCU: Heartbeat Sent - Door Status: %d (0 = Unlocked, 1 = Locked)", DoorStatus_TCU_FD);
+}  
+
+// ============================  
+//  User Input for Lock/Unlock  
+// ============================  
+
+on key 'U' 
+{ 
+  sendDoorRequestFD(0); // Unlock Request  
+}  
+
+on key 'L' 
+{ 
+  sendDoorRequestFD(1); // Lock Request  
+}  
+
+// ============================  
+//  Process BCM Responses  
+// ============================  
+
+on message Door_Status_Update_BCM_FD  
+{  
+  DoorStatus_TCU_FD = this.byte(0);  
+  write("TCU: Door Status Updated from BCM (CAN-FD) - %d", DoorStatus_TCU_FD);  
+}  
+
+on message Status_Notification_BCM_FD  
+{  
+  if (this.byte(0) == 1)  
+    write("TCU: ERROR - Door Operation Failed (CAN-FD)!");  
+  else  
+    write("TCU: SUCCESS - Door Operation Successful (CAN-FD)!");  
+}  

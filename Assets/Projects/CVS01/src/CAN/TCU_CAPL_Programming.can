@@ -1,0 +1,97 @@
+/*@!Encoding:1252*/  
+// ============================  
+//  TCU Variables and Messages  
+// ============================  
+variables  
+{  
+  message Remote_Door_Request msg_DoorRequest;      // CAN ID 0x200 (TCU ? BCM)  
+  message Door_Status_Update_BCM msg_DoorStatus;   // CAN ID 0x201 (BCM ? TCU)  
+  message Status_Notification_BCM msg_ErrorNotif;  // CAN ID 0x202 (BCM ? TCU)  
+
+  int DoorStatus_TCU = 0;   // Initially Unlocked (0 = Unlock, 1 = Lock)  
+  msTimer T1;  // Timer for periodic message transmission  
+}  
+
+// ============================  
+//  TCU Logic (User Input & Processing)  
+// ============================  
+
+// Function to send Door Lock/Unlock request to BCM  
+void sendDoorRequest(int DoorCmd)  
+{  
+  // Check if request is redundant (Trying to lock an already locked door)  
+  if (DoorCmd == DoorStatus_TCU)  
+  {  
+    write("ERROR: Request Ignored! Door is already %d (0 = Unlocked, 1 = Locked)", DoorStatus_TCU);  
+    return;  
+  }  
+
+  // Write `DoorCmd` into the CAN frame properly  
+  msg_DoorRequest.byte(0) = DoorCmd;    
+  output(msg_DoorRequest);  // Send the CAN message  
+
+  write("TCU: Sent Remote Door Request - %d (0 = Unlocked, 1 = Locked)", DoorCmd);  
+}  
+
+// ============================  
+//  Simulation Start: Initialize and Send Periodic Messages  
+// ============================  
+
+on start  
+{  
+  write("TCU: Simulation Started. Initializing...");  
+  setTimer(T1, 1000); // Start the periodic timer (1 sec interval)  
+
+  // Initial door status broadcast  
+  msg_DoorRequest.byte(0) = DoorStatus_TCU; // Set the initial status  
+  output(msg_DoorRequest); // Send initial message  
+}  
+
+// ============================  
+//  Periodic Heartbeat Message  
+// ============================  
+on timer T1  
+{  
+  setTimer(T1, 1000); // Reset timer for next transmission  
+  write("? TCU: Sending Heartbeat - Door Status: %d", DoorStatus_TCU);  
+
+
+  msg_DoorRequest.byte(0) = DoorStatus_TCU; // Keep sending current status  
+  output(msg_DoorRequest);  
+
+  write("TCU: Heartbeat Sent - Door Status: %d (0 = Unlocked, 1 = Locked)", DoorStatus_TCU);  
+}  
+
+// ============================  
+//  User Input: Press 'U' for Unlock, 'L' for Lock  
+// ============================  
+
+on key 'U'  
+{  
+  sendDoorRequest(0); // Unlock Request  
+}  
+
+on key 'L'  
+{  
+  sendDoorRequest(1); // Lock Request  
+}  
+
+// ============================  
+//  TCU Receives Responses from BCM  
+// ============================  
+
+// Receive Door Status Update from BCM  
+on message Door_Status_Update_BCM  
+{  
+  DoorStatus_TCU = this.byte(0);  
+  write("TCU: Door Status Updated - %d (0 = Unlocked, 1 = Locked)", DoorStatus_TCU);  
+}  
+
+// Receive Error Notification from BCM  
+on message Status_Notification_BCM  
+{  
+  if (this.byte(0) == 1)  // Correctly checking the error signal  
+  {  
+    write("TCU: Door operation failed (Vehicle Speed too high!)");  
+  }  
+}  

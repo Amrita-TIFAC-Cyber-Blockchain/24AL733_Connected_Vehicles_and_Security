@@ -1,0 +1,86 @@
+/*@!Encoding:1252*/  
+
+// ============================  
+//  BCM Variables and Messages  
+// ============================  
+variables  
+{  
+  message Remote_Door_Request_FD msg_DoorRequest_FD;    
+  message Door_Status_Update_BCM_FD msg_DoorStatus_FD; 
+  message Status_Notification_BCM_FD msg_ErrorNotif_FD; 
+
+  int VehicleSpeed_BCM_FD = 0; 
+  int DoorStatus_BCM_FD = 0;    // Initially Unlocked (0 = Unlock, 1 = Lock)
+
+  msTimer T1; 
+}  
+
+// ============================  
+//  Process Remote Door Request  
+// ============================  
+
+on message Remote_Door_Request_FD  
+{  
+  int Door_Cmd_FD;  
+  Door_Cmd_FD = this.byte(0);  // Extract command from received message
+
+  write("BCM: <<<<<<<< Received Remote Door Request (CAN-FD) - Requested Command: %d >>>>>>>>", Door_Cmd_FD);  
+
+  // Ensure valid command
+  if (Door_Cmd_FD != 0 && Door_Cmd_FD != 1)  
+  {  
+    write("BCM: ERROR - Invalid Door Command Received (CAN-FD): %d", Door_Cmd_FD);  
+    return;  
+  }
+
+  // Check if vehicle is moving  
+  if (VehicleSpeed_BCM_FD > 0)  
+  {  
+    msg_ErrorNotif_FD.byte(0) = 0x1;  // Operation Failed (Vehicle moving)
+    output(msg_ErrorNotif_FD);  
+    write("BCM: ERROR - Vehicle Moving! Door operation denied (CAN-FD).");  
+  }  
+  else  
+  {  
+    // Update door status based on command received  
+    if (DoorStatus_BCM_FD != Door_Cmd_FD) {
+        // If door status needs to change
+        DoorStatus_BCM_FD = Door_Cmd_FD;
+
+        // Send the updated door status to TCU and other systems
+        msg_DoorStatus_FD.byte(0) = (byte)DoorStatus_BCM_FD;
+        output(msg_DoorStatus_FD);  
+        write("BCM: Door status updated to %d (0 = Unlocked, 1 = Locked)", DoorStatus_BCM_FD);  
+    }
+    else {
+        write("BCM: No change in Door Status - Already %d", DoorStatus_BCM_FD);  
+    }
+
+    // Send operation successful notification  
+    msg_ErrorNotif_FD.byte(0) = 0x0;  // Operation Successful
+    output(msg_ErrorNotif_FD);  
+    write("BCM: Operation Successful - Door status updated (CAN-FD).");  
+  }  
+}  
+
+// ============================  
+//  Periodic Heartbeat Signal  
+// ============================  
+
+on start  
+{  
+  write("BCM: CAN-FD Simulation Started.");  
+  setTimer(T1, 1000);  // Periodic heartbeat  
+}  
+
+on timer T1  
+{  
+  setTimer(T1, 1000);  // Restart timer for periodic updates
+  
+  // Send periodic door status update
+  write("DEBUG: Heartbeat - Current Door Status at BCM: %d (0 = Unlocked, 1 = Locked)", DoorStatus_BCM_FD);  
+  msg_DoorStatus_FD.byte(0) = (byte)DoorStatus_BCM_FD;  
+  output(msg_DoorStatus_FD);  
+
+  write("BCM: Periodic Door Status Update - %d", DoorStatus_BCM_FD);  
+}  
