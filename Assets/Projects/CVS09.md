@@ -99,17 +99,9 @@ Given that Raspberry Pi may operate in dynamic or NATed networks:<br/>
 • Logs and failures are tracked via GitHub Actions dashboard.<br/>
 
 <p align="center">
-  ![image](https://github.com/user-attachments/assets/c0366c5a-7d76-47ab-9e6b-6995e95d9f99)
+  <img src="https://github.com/user-attachments/assets/c0366c5a-7d76-47ab-9e6b-6995e95d9f99" width=800/>
 
 </p>
-
----
-
-### Implementation Details
-
-  <img src="https://github.com/user-attachments/assets/b098e9ea-e7ef-49ad-a826-9558c46d3dc4" width=800/>
-
-
 
 ---
 
@@ -119,6 +111,33 @@ Braking System for EV” application has been implemented.
 1) Create a GitHub repository with all files, including a .YML file, to trigger GitHub actions.
 ![image](https://github.com/user-attachments/assets/9a4f210d-254e-42f8-99eb-ff81bb1dcec6)
 
+2) The application does not yet have brake support. It only indicates when it detects the obstacle using a LED.
+![image](https://github.com/user-attachments/assets/77d6ecfa-4c04-4cdf-929a-b5f5c3b7cbd7)
+When Distance is more
+
+![image](https://github.com/user-attachments/assets/1a20eaa8-56cf-4d0b-af13-4474306e0e59)
+When Distance is less
+
+3) Added the new changes to the code and commit the changes which will trigger the GitHub Actions workflow.
+![image](https://github.com/user-attachments/assets/e749d0c0-eae4-4f63-90d8-4643c47cefd1)
+Committing changes after updating the code
+
+![image](https://github.com/user-attachments/assets/03da5815-89b8-42ae-9384-d3c35ec307fb)
+GitHub Actions Workflow Started
+
+4) The below image shows the completion of all the steps in the pipeline one by one which includes PyArmor obfuscation, Docker build (ARM64), Docker push, Tailscale login, SSH deployment.
+![image](https://github.com/user-attachments/assets/07d46547-fff6-4cb5-8853-40366261f5a7)
+GitHub Actions Workflow Finished
+
+5) The application now has the braking feature added which makes the vehicle stop when obstacle detected along with indication as shown below.
+![image](https://github.com/user-attachments/assets/f53ddeeb-c285-47a1-a71d-e493c7c0faf0)
+When Distance is more
+
+![image](https://github.com/user-attachments/assets/22dbd949-74ca-4de7-833a-3782f9282fd5)
+When Distance is less
+
+6) Code deployment status and code after obfuscation is shown below.
+  <img src="https://github.com/user-attachments/assets/b098e9ea-e7ef-49ad-a826-9558c46d3dc4" width=800/>
 ---
 ### Demo Videos
 
