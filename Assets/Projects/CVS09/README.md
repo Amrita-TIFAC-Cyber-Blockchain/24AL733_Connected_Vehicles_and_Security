@@ -167,7 +167,7 @@ To demonstrate the process, the ”Autonomous Emergency Braking System for EV”
 [3] Karthikeyan Palanichamy. (2023). Scalable Python Tools for Managing OTA Updates in Automotive Systems. International Journal of Scientific Research and Management (IJSRM).<br/>
 [4] Volodymyr Havran, Maria Orynchak. (2022). Investigation And Implementation of Jenkins Pipelines into Raspberry Pi For Automated Control Units. Education and science of today: intersectoral issues and development of sciences.<br/>
 [5] Tanuku SaiLakshmi Madhuri, Dr. J BalaVishnu, ”Software-Defined Vehicles: The Future of Automobile Industry,” COMSNETS 2025 - Advances in Autonomous Driving Vehicular Networks (ADVnet), IEEE.<br/>
-[6] S. Nithin, S. J. Hamsalekha, and S. Parvathy, ”Enhancing the Automotive Software Test Environment Using Continuous Integration and Validation Pipeline,” in 2023 Innovations in Power and Advanced Computing Technologies (i-PACT), IEEE, 2023. doi:10.1109/IPACT58649.2023.10434454.<br/>
+[6] S. Nithin, S. J. Hamsalekha, and S. Parvathy, ”Enhancing the Automotive Software Test Environment Using Continuous Integration and Validation Pipeline,” in 2023 Innovations in Power and Advanced Computing Technologies (i-PACT), IEEE, 2023. doi:10.1109/IPACT58649.2023.10434454.<br/>
 [7] Docker Documentation. [Online]. Available: https://docs.docker.com<br/>
 [8] PyArmor Obfuscation Tool. [Online]. Available: https://pyarmor.readthedocs.io<br/>
 [9] GitHub Actions Documentation. [Online]. Available: https://docs.github.com/en/actions<br/>
