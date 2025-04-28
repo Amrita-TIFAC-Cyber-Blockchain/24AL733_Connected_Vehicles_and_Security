@@ -87,8 +87,9 @@ Enter the correct password SecureV2X2025 when prompted.
 Create a network model with end devices(HPC in an automotive vehicle), routers, and cloud servers.<br>
 Configure secure communication channels using cryptographic protocols.<br>
 
+![](CVS05/images/Screenshot%202025-03-23%20164716.png)
 
-
+Image showing the established connection.
 ---
 
 
