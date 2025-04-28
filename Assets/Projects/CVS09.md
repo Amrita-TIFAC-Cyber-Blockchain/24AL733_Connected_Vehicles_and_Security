@@ -50,62 +50,63 @@ a lot of manual labor, which increases costs, lengthens downtime, and could dela
 ### Methodology
 The design and implementation approach for creating the safe OTA deployment pipeline for Software Defined Vehicles (SDVs) is described in this section. Using open-source tools, the method incorporates DevSecOps principles to enable automated, secure, and reproducible deployment workflows for edge hardware like Raspberry Pi.<br/>
 
-A. System Overview:<br/>
-The proposed system comprises the following key components:<br/>
+**A. System Overview:** <br/>
+The proposed system comprises the following key components:<br/>
 • A GitHub repository hosting application source code and workflow configurations.<br/>
 • A Docker-based build environment targeting arm64 to match the Raspberry Pi’s architecture.<br/>
 • PyArmor for runtime code obfuscation, ensuring intellectual property protection.<br/>
 • A GitHub Actions workflow that orchestrates code obfuscation, Docker image creation, image pushing, and remote deployment.<br/>
-• A Tailscale-powered VPN that enables secure, IPindependent SSH access to the target device for deployment.<br/>
+• A Tailscale-powered VPN that enables secure, IP independent SSH access to the target device for deployment.<br/>
 
-B. Code Obfuscation with PyArmor
-To ensure protection against reverse engineering and maintain code confidentiality:
-• PyArmor is installed in a Docker container running arm64v8/python:3.11 to match the Raspberry Pi’s architecture.
-• The pyarmor gen app.py command obfuscates the source file, creating a new app.py and a pyarmorruntime000000/ directory containing a runtime .so file.
-• Only these files are included in the final Docker image, ensuring the original source is never exposed.
+**B. Code Obfuscation with PyArmor** <br/>
+To ensure protection against reverse engineering and maintain code confidentiality:<br/>
+• PyArmor is installed in a Docker container running arm64v8/python:3.11 to match the Raspberry Pi’s architecture.<br/>
+• The pyarmor gen app.py command obfuscates the source file, creating a new app.py and a pyarmorruntime000000/ directory containing a runtime .so file.<br/>
+• Only these files are included in the final Docker image, ensuring the original source is never exposed.<br/>
 
-C. Docker-Based Containerization
-The application is containerized to ensure consistency and platform independence:
-• A Dockerfile is created using arm64v8/python:latest as the base image.
-• The obfuscated app.py and PyArmor runtime files are copied into the container.
-• All required Python dependencies are installed via requirements.txt.
-• The container is built and tagged using docker buildx, targeting the linux/arm64 architecture.
-• The final image is pushed to Docker Hub under a versioned tag.
+**C. Docker-Based Containerization**<br/>
+The application is containerized to ensure consistency and platform independence:<br/>
+• A Dockerfile is created using arm64v8/python:latest as the base image.<br/>
+• The obfuscated app.py and PyArmor runtime files are copied into the container.<br/>
+• All required Python dependencies are installed via requirements.txt.<br/>
+• The container is built and tagged using docker buildx, targeting the linux/arm64 architecture.<br/>
+• The final image is pushed to Docker Hub under a versioned tag.<br/>
 
-D. CI/CD Pipeline using GitHub Actions
-The GitHub Actions workflow (app-deploy.yml) is responsible for:
-• Checking out the code from the repository.
-• Obfuscating the application code with PyArmor inside an ARM64 container.
-• Building the Docker image using buildx and pushing it to Docker Hub.
-• Install and authenticate Tailscale with a GitHub secret (TAILSCALE_AUTHKEY ).
-• Setting up SSH access using a securely stored private key (SSH_PRIVATE_KEY ).
-• Remotely accessing the Raspberry Pi using its Tailscale IP and deploying the container using docker run.
+**D. CI/CD Pipeline using GitHub Actions**<br/>
+The GitHub Actions workflow (app-deploy.yml) is responsible for:<br/>
+• Checking out the code from the repository.<br/>
+• Obfuscating the application code with PyArmor inside an ARM64 container.<br/>
+• Building the Docker image using buildx and pushing it to Docker Hub.<br/>
+• Install and authenticate Tailscale with a GitHub secret (TAILSCALE_AUTHKEY ).<br/>
+• Setting up SSH access using a securely stored private key (SSH_PRIVATE_KEY ).<br/>
+• Remotely accessing the Raspberry Pi using its Tailscale IP and deploying the container using docker run.<br/>
 
-E. Remote Deployment with Tailscale
-Given that Raspberry Pi may operate in dynamic or NATed networks:
-• Tailscale is used to create a secure mesh VPN, enabling direct access to the Raspberry Pi using a constant virtual IP.
-• The GitHub runner connects to the Raspberry Pi using SSH over Tailscale.
-• The deployment script logs in to Docker Hub, pulls the latest image, stops any existing container, and runs the new container with the –privileged flag.
+**E. Remote Deployment with Tailscale**<br/>
+Given that Raspberry Pi may operate in dynamic or NATed networks:<br/>
+• Tailscale is used to create a secure mesh VPN, enabling direct access to the Raspberry Pi using a constant virtual IP.<br/>
+• The GitHub runner connects to the Raspberry Pi using SSH over Tailscale.<br/>
+• The deployment script logs in to Docker Hub, pulls the latest image, stops any existing container, and runs the new container with the –privileged flag.<br/>
 
-F. Summary Workflow
-• Developer pushes code to the main branch.
-• GitHub Actions initiates:
-  1. PyArmor obfuscation
-  2. Docker build (ARM64)
-  3. Docker push
-  4. Tailscale login
-  5. SSH deployment
-• Raspberry Pi pulls and runs the updated container.
-• Logs and failures are tracked via GitHub Actions dashboard.
-
+**F. Summary Workflow**<br/>
+• Developer pushes code to the main branch.<br/>
+• GitHub Actions initiates:<br/>
+  1. PyArmor obfuscation<br/>
+  2. Docker build (ARM64)<br/>
+  3. Docker push<br/>
+  4. Tailscale login<br/>
+  5. SSH deployment<br/>
+• Raspberry Pi pulls and runs the updated container.<br/>
+• Logs and failures are tracked via GitHub Actions dashboard.<br/>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8fb660f2-230e-4751-b06d-f0a6088757b8" width=800/>
+</p>
 ---
 
 ### Implementation Details
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/8fb660f2-230e-4751-b06d-f0a6088757b8" width=800/>
+
   <img src="https://github.com/user-attachments/assets/b098e9ea-e7ef-49ad-a826-9558c46d3dc4" width=800/>
 
-</p>
+
 
 ---
 
