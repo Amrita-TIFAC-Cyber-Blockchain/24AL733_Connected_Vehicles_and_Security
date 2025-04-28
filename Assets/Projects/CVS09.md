@@ -48,15 +48,15 @@ a lot of manual labor, which increases costs, lengthens downtime, and could dela
 
 ---
 ### Methodology
-The design and implementation approach for creating the safe OTA deployment pipeline for Software Defined Vehicles (SDVs) is described in this section. Using open-source tools, the method incorporates DevSecOps principles to enable automated, secure, and reproducible deployment workflows for edge hardware like Raspberry Pi.
+The design and implementation approach for creating the safe OTA deployment pipeline for Software Defined Vehicles (SDVs) is described in this section. Using open-source tools, the method incorporates DevSecOps principles to enable automated, secure, and reproducible deployment workflows for edge hardware like Raspberry Pi.<br/>
 
-A. System Overview
-The proposed system comprises the following key components:
-*•* A GitHub repository hosting application source code and workflow configurations.
-*•* A Docker-based build environment targeting arm64 to match the Raspberry Pi’s architecture.
-*•* PyArmor for runtime code obfuscation, ensuring intellectual property protection.
-*•* A GitHub Actions workflow that orchestrates code obfuscation, Docker image creation, image pushing, and remote deployment.
-*•* A Tailscale-powered VPN that enables secure, IPindependent SSH access to the target device for deployment.
+A. System Overview:<br/>
+The proposed system comprises the following key components:<br/>
+• A GitHub repository hosting application source code and workflow configurations.<br/>
+• A Docker-based build environment targeting arm64 to match the Raspberry Pi’s architecture.<br/>
+• PyArmor for runtime code obfuscation, ensuring intellectual property protection.<br/>
+• A GitHub Actions workflow that orchestrates code obfuscation, Docker image creation, image pushing, and remote deployment.<br/>
+• A Tailscale-powered VPN that enables secure, IPindependent SSH access to the target device for deployment.<br/>
 
 B. Code Obfuscation with PyArmor
 To ensure protection against reverse engineering and maintain code confidentiality:
