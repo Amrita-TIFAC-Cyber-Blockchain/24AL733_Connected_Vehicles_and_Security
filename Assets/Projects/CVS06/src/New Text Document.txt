@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<!--debug config-->
-<launch>
-	<copy file="AmritaMap.net.xml"/>
-	<copy file="AmritaMap.rou.xml"/>
-	<copy file="AmritaMap.sumocfg" type="config"/>
-</launch>

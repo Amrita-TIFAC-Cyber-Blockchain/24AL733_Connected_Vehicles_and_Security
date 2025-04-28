@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--debug config-->
-<launch>
-	<copy file="test.net.xml"/>
-	<copy file="test.rou.xml"/>
-	<copy file="test.sumocfg" type="config"/>
-</launch>
