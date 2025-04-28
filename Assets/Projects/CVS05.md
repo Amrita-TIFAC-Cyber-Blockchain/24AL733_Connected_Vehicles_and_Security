@@ -45,15 +45,28 @@ WPA2 PSK Authentication Mechanism
 PC (Vehicle) Simulation Nodes
 Wireless Routers (for RSU and Cloud Access Points)
 Servers (to simulate cloud services)
+##### Authentication Flow chart:
 
-#### Workflow Simulation
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/bd638764-4c0c-4404-adfd-75b1010d591b" width=600 />
+</p
+
+
+##### Vehicular Authentication Flow:
+Step 1: Vehicle initiates authentication with the cloud server.<br>
+Step 2: Cloud server verifies the vehicle’s identity using certificate-based authentication.<br>
+Step 3: A session key is generated using symmetric cryptography for secure communication.<br>
+Step 4: Data integrity is verified for every packet exchanged during the session.<br>
+
+
+#### Implementation and Simulation
 ##### Step 1: Initial Setup
 Open CISCO Packet Tracer.
 Create two PC devices representing two connected vehicles (e.g., Vehicle1 and Vehicle2).
 Add a Wireless Router (e.g., RSU-Router).
 Add a Server representing the cloud infrastructure.
 
-![]([https://img.shields.io/badge/SDG-TBD-darkgreen](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS05/images/Screenshot%202025-03-23%20155315.png)) <br/> 
+![](CVS05/images/Screenshot%202025-03-23%20155315.png) <br/> 
 
 ##### Step 2: Configure the Wireless Router (RSU)
 Set SSID to a custom name (e.g., ConnectedVehiclesNet).
@@ -68,24 +81,12 @@ Enable Wireless Interface on each PC (select the appropriate NIC card).
 Search for available networks and connect to ConnectedVehiclesNet.
 Enter the correct password SecureV2X2025 when prompted.
 
-![]([https://img.shields.io/badge/SDG-TBD-darkgreen](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS05/images/Screenshot%202025-04-26%20151541.png)) <br/> 
+![ ](CVS05/images/Screenshot%202025-04-26%20151541.png)
 
 ##### Network Design in CISCO Packet Tracer:
 Create a network model with end devices(HPC in an automotive vehicle), routers, and cloud servers.<br>
 Configure secure communication channels using cryptographic protocols.<br>
 
-##### Authentication Flow chart:
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/bd638764-4c0c-4404-adfd-75b1010d591b" width=600 />
-</p
-
-
-##### Vehicular Authentication Flow:
-Step 1: Vehicle initiates authentication with the cloud server.<br>
-Step 2: Cloud server verifies the vehicle’s identity using certificate-based authentication.<br>
-Step 3: A session key is generated using symmetric cryptography for secure communication.<br>
-Step 4: Data integrity is verified for every packet exchanged during the session.<br>
 
 
 ---
