@@ -37,11 +37,39 @@ Simulate and demonstrate the mechanism using CISCO Packet Tracer, enabling pract
 ---
 
 ### Implementation Details
-#### Development and Simulation Tools
-Simulation Platform: CISCO Packet Tracer will be used to simulate the communication workflows between vehicles and the cloud.
-Cryptographic Components: Lightweight cryptography (ECC, AES) and hash-based integrity checks (HMAC) will be incorporated into the simulation.
-Protocol Stack: Implementation of key protocols such as HTTPS, MQTT, or CoAP for secure communication.
+This section outlines the detailed implementation steps carried out to simulate Vehicle-to-Infrastructure (V2I) authentication mechanisms using CISCO Packet Tracer.
+#### Tools Used
+CISCO Packet Tracer v8.2+
+Wireless LAN (WLAN) protocols
+WPA2 PSK Authentication Mechanism
+PC (Vehicle) Simulation Nodes
+Wireless Routers (for RSU and Cloud Access Points)
+Servers (to simulate cloud services)
+
 #### Workflow Simulation
+##### Step 1: Initial Setup
+Open CISCO Packet Tracer.
+Create two PC devices representing two connected vehicles (e.g., Vehicle1 and Vehicle2).
+Add a Wireless Router (e.g., RSU-Router).
+Add a Server representing the cloud infrastructure.
+
+![]([https://img.shields.io/badge/SDG-TBD-darkgreen](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS05/images/Screenshot%202025-03-23%20155315.png)) <br/> 
+
+##### Step 2: Configure the Wireless Router (RSU)
+Set SSID to a custom name (e.g., ConnectedVehiclesNet).
+Enable Wireless Security:
+Security Mode: WPA2-PSK
+Set a strong Pre-Shared Key (Password), e.g., SecureV2X2025
+Assign a DHCP Server role to the router to automatically allocate IP addresses to connected vehicles.
+Configure basic router settings (LAN IP address, default gateway, etc.).
+
+##### Step 3: Configure Vehicles (PC Devices)
+Enable Wireless Interface on each PC (select the appropriate NIC card).
+Search for available networks and connect to ConnectedVehiclesNet.
+Enter the correct password SecureV2X2025 when prompted.
+
+![]([https://img.shields.io/badge/SDG-TBD-darkgreen](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS05/images/Screenshot%202025-04-26%20151541.png)) <br/> 
+
 ##### Network Design in CISCO Packet Tracer:
 Create a network model with end devices(HPC in an automotive vehicle), routers, and cloud servers.<br>
 Configure secure communication channels using cryptographic protocols.<br>
@@ -66,13 +94,34 @@ Step 4: Data integrity is verified for every packet exchanged during the session
 ### Mapping to Sustainable Development Goals (SDG)
 The security of connected vehicle ecosystems plays a crucial role in building a smarter, safer, and more efficient transportation system. This research contributes to several United Nations Sustainable Development Goals (SDGs) by ensuring secure communication, protecting user data, and supporting innovation in intelligent transportation.
 
-SDG 9 (Industry, Innovation, and Infrastructure) focuses on building resilient and sustainable infrastructure. By developing a secure authentication framework for Vehicle-to-Cloud (V2C) and Vehicle-to-Everything (V2X) communication, this research helps strengthen the security of intelligent transportation systems. A reliable authentication mechanism ensures trustworthy data exchange, preventing cyber threats and unauthorized access. Additionally, integrating lightweight cryptographic techniques makes these security solutions efficient and scalable, fostering innovation in autonomous driving, smart mobility, and intelligent traffic management.
 
-SDG 11 (Sustainable Cities and Communities) emphasizes the need for safe and efficient urban mobility. Cyber threats such as vehicle hijacking, data breaches, and unauthorized access pose serious risks to smart transportation systems. A secure authentication mechanism helps mitigate these risks, making connected vehicles and smart city mobility solutions safer and more resilient. Furthermore, secure real-time data exchange improves traffic management, reduces congestion, and lowers carbon emissions, contributing to a cleaner and more sustainable urban environment.
+| **SDG** | **Goal Focus** | **Research Contribution** |
+|:-------:|:--------------|:---------------------------|
+| **SDG 9: Industry, Innovation, and Infrastructure** | Build resilient infrastructure, promote sustainable industrialization, and foster innovation. | Developed a secure authentication framework for Vehicle-to-Cloud (V2C) and Vehicle-to-Everything (V2X) communications. Strengthened cybersecurity of intelligent transport systems. Integrated lightweight cryptographic techniques to promote efficient, scalable security solutions. |
+| **SDG 11: Sustainable Cities and Communities** | Make cities inclusive, safe, resilient, and sustainable. | Secured connected vehicle communications to prevent cyber threats like hijacking and data breaches. Enabled safe and efficient real-time data exchange to improve traffic management, reduce congestion, and lower emissions. Supported development of smarter, cleaner urban mobility systems. |
+| **SDG 16: Peace, Justice, and Strong Institutions** | Promote peaceful, inclusive societies and build strong institutions. | Ensured data integrity, user privacy, and cybersecurity in smart transportation systems. Strengthened digital governance and regulatory compliance by preventing unauthorized access and identity theft. Fostered trust and transparency in connected vehicle ecosystems. |
 
-SDG 16 (Peace, Justice, and Strong Institutions) highlights the importance of strong digital governance and cybersecurity. The proposed authentication framework ensures data integrity, privacy, and protection against cyber threats, reinforcing trust in connected vehicle ecosystems. By preventing digital identity theft and unauthorized system access, this research supports transparent and secure smart mobility governance. Strengthening cybersecurity in transportation systems also contributes to better regulatory compliance and the development of strong digital security policies.
 
 By ensuring secure communication in cloud-based connected vehicle ecosystems, this research contributes to a more sustainable, efficient, and resilient transportation network that aligns with global efforts to build smarter cities and protect digital infrastructure.
+
+
+### Conclusion
+The simulation and experimentation conducted using CISCO Packet Tracer successfully demonstrated the importance of authentication mechanisms in securing Vehicle-to-Everything (V2X) communication networks.
+
+Through various scenarios, it was observed that simple security measures, such as WPA2-PSK authentication at the wireless access point level, can effectively prevent unauthorized access attempts and ensure that only trusted entities (vehicles) can participate in the network. Authentication not only validated the legitimacy of each vehicle’s connection request but also served as the first line of defense against common cyber-attacks such as spoofing and man-in-the-middle (MITM) attacks.
+
+The project reinforced several key takeaways:
+
+Authentication is foundational to V2X security: Without verifying the identity of communicating vehicles and infrastructure, the entire network remains vulnerable to malicious actors.
+
+Even basic authentication mechanisms provide significant protection: By simply enforcing password-based access control, many attack vectors are blocked before they can impact critical systems.
+
+Real-world V2X security needs multi-layered defenses: Beyond password authentication, real deployments would benefit from Public Key Infrastructure (PKI), digital certificates, blockchain-based authentication, and cryptographic session management to achieve comprehensive security.
+
+The practical implementation using Packet Tracer also highlighted the simulation tool’s strength in providing a safe, flexible, and educational environment for modeling, testing, and visualizing connected vehicle security architectures before real-world deployment.
+
+In conclusion, secure authentication workflows are not optional but essential for the future of connected and autonomous vehicles. As vehicles become increasingly intelligent and interconnected, building trust in vehicular networks through strong, scalable, and efficient authentication mechanisms will be key to realizing the vision of safe, reliable, and cyber-resilient intelligent transportation systems.
+
 
 ---
 
