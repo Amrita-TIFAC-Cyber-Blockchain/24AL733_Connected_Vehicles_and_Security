@@ -90,21 +90,34 @@ This approach ensures the development of a secure and resilient CAN-FD communica
 
 ### Implementation Details
 
-1. MATLAB’s Vehicle Network Toolbox will create a simulated CAN-FD network. Multiple Electronic Control Units (ECUs) will communicate over a CAN-FD bus, designed to replicate real-world vehicle communication with legitimate message exchanges between ECUs.
+1. Simulate a CAN-FD network using MATLAB Vehicle Network Toolbox with virtual ECUs communicating over MathWorks Virtual Channel 1.
 
-2. A normal CAN-FD message transmission scenario will be set up. An attacker node will intercept and modify legitimate messages before forwarding them. The system will analyze how these alterations impact vehicle functionality.
+2. Normal sensor data (temperature) is generated using Random Number and constant sources, packed into CAN-FD messages (Temperature Data Packing1, Packing2).
 
-3. A real-time Intrusion Detection System (IDS) will monitor message integrity by comparing incoming messages with expected values. Cryptographic authentication methods, such as AES-128 encryption and HMAC verification, will be used to secure message transmissions and detect unauthorized modifications.
+3. Messages are transmitted using CAN-FD Transmit blocks (CAN-FD Transmit1, CAN-FD Transmit2).
 
-4. Normal CAN-FD messages will be generated, and an attacker node will inject unauthorized messages. This simulation will test the network’s vulnerability to unauthorized command execution, such as false brake or acceleration signals.
+4. An attacker node intercepts and modifies legitimate CAN-FD messages before forwarding.
 
-5. ECU authentication mechanisms will be enforced using Message Authentication Codes (MACs). Messages from unauthorized sources will be filtered out, preventing the execution of false commands that could compromise the system.
+5. AES-128 encryption is applied to outgoing messages to protect data integrity.
 
-6. A flooding attack will be simulated, where an attacker node sends an excessive number of messages to overwhelm the CAN-FD bus. The system's ability to maintain normal ECU communication and response times will be evaluated.
+6. SHA-256 hashing is used to generate a Message Authentication Code (MAC) for verifying message authenticity.
 
-7. Rate-monitoring techniques will be implemented to detect abnormal traffic patterns. Firewall-based packet filtering will be used to limit excessive message transmission, and SYN cookies will be applied to prevent repeated malicious message floods.
+7. At the receiver side, incoming messages undergo AES-128 decryption and SHA verification.
 
-8. The effectiveness of the implemented security measures will be tested under various attack scenarios. Metrics such as detection rate, false positives, and system response time will be analyzed to evaluate the efficiency of the IDS and cryptographic security mechanisms.
+8. Intrusion Detection System (IDS) compares received hashes with expected hashes to detect message tampering.
+
+9. Unauthorized messages or tampered packets are filtered and rejected.
+
+10. Flooding/DoS attacks are simulated by randomly generating excessive CAN messages using Random Number and multiple transmitters.
+
+11. Rate-monitoring logic detects abnormal traffic patterns indicative of flooding.
+
+12. Firewall-based packet filtering is applied to drop excessive or malformed packets.
+
+13. Rate-limiting techniques (similar to SYN cookies) prevent the CAN bus from being overwhelmed.
+
+14. System performance is evaluated under normal, tampered, and flood attack scenarios.
+
 
 ---
 
