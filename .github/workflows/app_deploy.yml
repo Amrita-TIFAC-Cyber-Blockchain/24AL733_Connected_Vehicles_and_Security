@@ -3,7 +3,7 @@ name: Build and Deploy to Raspberry Pi via SSH (Tailscale)
 on:
   push:
     branches:
-      - 23-RCRE  # Runs when code is pushed to the main branch
+      - 23-WCRE  # Runs when code is pushed to the main branch
 
 jobs:
   build-and-deploy:
