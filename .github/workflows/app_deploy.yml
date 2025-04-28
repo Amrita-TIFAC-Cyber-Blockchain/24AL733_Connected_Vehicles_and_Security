@@ -1,0 +1,85 @@
+name: Build and Deploy to Raspberry Pi via SSH (Tailscale)
+
+on:
+  push:
+    branches:
+      - main  # Runs when code is pushed to the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ✅ Checkout repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # ✅ Set up QEMU (for cross-platform builds)
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      # ✅ Set up Docker Buildx
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Obfuscate Python Code with PyArmor in ARM64 (Python 3.11)
+        run: |
+          docker run --rm --platform linux/arm64 -v $PWD:/src -w /src arm64v8/python:3.11 sh -c "
+            pip install pyarmor flask &&
+            pyarmor gen app.py
+          "
+
+
+      # ✅ Log in to Docker Hub
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # ✅ Build and Push Docker Image for Raspberry Pi
+      - name: Build and Push Docker Image
+        run: |
+          docker buildx create --use
+          docker buildx build --platform linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/my-rpi-gpio-app --push .
+
+      # ✅ Install & Authenticate Tailscale
+      - name: Install & Authenticate Tailscale
+        run: |
+          curl -fsSL https://tailscale.com/install.sh | sh
+          sudo tailscale up --authkey ${{ secrets.TAILSCALE_AUTH_KEY }}
+
+      # ✅ Setup SSH Key for Secure Deployment
+      - name: Setup SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "${{ secrets.RPI_HOST }}" >> ~/.ssh/known_hosts
+
+      # ✅ Deploy to Raspberry Pi
+      - name: Deploy to Raspberry Pi
+        run: |
+          ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no ameen@${{ secrets.RPI_HOST }} << 'EOF'
+            export DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}
+            export DOCKER_IMAGE=${{ secrets.DOCKER_USERNAME }}/my-rpi-gpio-app:latest
+
+            # Ensure Docker is installed
+            if ! command -v docker &> /dev/null; then
+              sudo apt update
+              sudo apt install -y docker.io
+            fi
+
+            # Login to Docker Hub (if required)
+            echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+            # Pull the latest Docker image
+            docker pull $DOCKER_IMAGE
+
+            # Stop and remove any existing container
+            docker stop rpi-app || true
+            docker rm rpi-app || true
+
+            # Run the new container
+            docker run -d --name rpi-app --restart unless-stopped --privileged $DOCKER_IMAGE
+          EOF
