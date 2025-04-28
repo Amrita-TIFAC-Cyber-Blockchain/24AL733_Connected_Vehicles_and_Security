@@ -52,11 +52,11 @@ The design and implementation approach for creating the safe OTA deployment pipe
 
 A. System Overview
 The proposed system comprises the following key components:
-• A GitHub repository hosting application source code and workflow configurations.
-• A Docker-based build environment targeting arm64 to match the Raspberry Pi’s architecture.
-• PyArmor for runtime code obfuscation, ensuring intellectual property protection.
-• A GitHub Actions workflow that orchestrates code obfuscation, Docker image creation, image pushing, and remote deployment.
-• A Tailscale-powered VPN that enables secure, IPindependent SSH access to the target device for deployment.
+*•* A GitHub repository hosting application source code and workflow configurations.
+*•* A Docker-based build environment targeting arm64 to match the Raspberry Pi’s architecture.
+*•* PyArmor for runtime code obfuscation, ensuring intellectual property protection.
+*•* A GitHub Actions workflow that orchestrates code obfuscation, Docker image creation, image pushing, and remote deployment.
+*•* A Tailscale-powered VPN that enables secure, IPindependent SSH access to the target device for deployment.
 
 B. Code Obfuscation with PyArmor
 To ensure protection against reverse engineering and maintain code confidentiality:
