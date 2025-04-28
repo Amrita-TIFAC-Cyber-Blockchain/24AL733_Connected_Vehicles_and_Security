@@ -97,10 +97,10 @@ Given that Raspberry Pi may operate in dynamic or NATed networks:<br/>
   5. SSH deployment<br/>
 • Raspberry Pi pulls and runs the updated container.<br/>
 • Logs and failures are tracked via GitHub Actions dashboard.<br/>
-![image](https://github.com/user-attachments/assets/ea04f7b7-480a-48f7-b517-5732c4b16964)
 
 <p align="center">
-  
+  ![image](https://github.com/user-attachments/assets/c0366c5a-7d76-47ab-9e6b-6995e95d9f99)
+
 </p>
 
 ---
