@@ -137,10 +137,12 @@ To demonstrate the process, the ”Autonomous Emergency Braking System for EV”
 
 6) Code deployment status and code after obfuscation is shown below.<br/> 
   <img src="https://github.com/user-attachments/assets/b098e9ea-e7ef-49ad-a826-9558c46d3dc4" width=800/>
-<br/> 
----
-### Demo Videos
 
+
+
+<br/>---
+### Demo Videos
+**URL:-** https://drive.google.com/file/d/1Q_l7ee55IJA1UgQubs3VR0L_Z7Yt_39O/view?usp=drivesdk
 
 ---
 
@@ -148,8 +150,13 @@ To demonstrate the process, the ”Autonomous Emergency Braking System for EV”
 
 | SDG        | Alignment                                                                         |
 |:-----------|:----------------------------------------------------------------------------------|
-| *Goal 3 - Good Health and Well-Being*  | Reduces delays caused by traffic congestion, improving response times and lowering fatalities from accidents. Enhances universal access to timely emergency medical care. |
-| *Goal 9 - Industry, Innovation, and Infrastructure* | Supports sustainable and resilient infrastructure through the integration of IoT for emergency medical services. Advances innovation in IoT-enabled emergency response systems. |
+| *Goal 7 - Affordable and Clean Energy*  | Efficient OTA updates reduce the need for physical maintenance and downtime of vehicles, thereby optimizing energy consumption and operational efficiency in automotive electronics.|
+| *Goal 9 - Industry, Innovation, and Infrastructure* | By implementing a secure and automated CI/CD pipeline for SDVs, the project accelerates innovation in the automotive industry, enabling faster deployment of software features and safety improvements.  |
+| *Goal 11: Sustainable Cities and Communities* | OTA updates ensure vehicles are regularly maintained with the latest software, enhancing urban mobility solutions, improving safety standards, and promoting sustainability in smart city ecosystems.  |
+| *Goal 12: Responsible Consumption and Production* | Automated, remote software updates minimize hardware replacements and physical interventions, leading to reduced electronic waste and promoting sustainable production practices.  |
+| *Goal 13: Climate Action* | Enabling efficient and timely updates contributes to optimal vehicle performance, reduced emissions, and smarter resource utilization, directly supporting global efforts toward climate change mitigation.  |
+| *Goal 16: Peace, Justice, and Strong Institutions* | By focusing on secure software deployment and protecting code integrity through DevSecOps principles, the project promotes trust, transparency, and security in critical automotive systems.  |
+| *Goal 17: Partnerships for the Goals* | The project demonstrates a collaborative approach, integrating open-source tools (Docker, GitHub Actions, Tailscale, PyArmor) to build scalable and interoperable solutions, aligning with global partnership initiatives for sustainable development.  |
 
 
 ---
@@ -159,3 +166,10 @@ To demonstrate the process, the ”Autonomous Emergency Braking System for EV”
 [2] Ayush Ankit, M. J., K Nimala. (2024). Creation of continuous integration continuous deployment pipeline using cloud. 2024 5th International Conference on Intelligent Communication Technologies and Virtual Mobile Networks (ICICV).<br/>
 [3] Karthikeyan Palanichamy. (2023). Scalable Python Tools for Managing OTA Updates in Automotive Systems. International Journal of Scientific Research and Management (IJSRM).<br/>
 [4] Volodymyr Havran, Maria Orynchak. (2022). Investigation And Implementation of Jenkins Pipelines into Raspberry Pi For Automated Control Units. Education and science of today: intersectoral issues and development of sciences.<br/>
+[5] Tanuku SaiLakshmi Madhuri, Dr. J BalaVishnu, ”Software-Defined Vehicles: The Future of Automobile Industry,” COMSNETS 2025 - Advances in Autonomous Driving Vehicular Networks (ADVnet), IEEE.<br/>
+[6] S. Nithin, S. J. Hamsalekha, and S. Parvathy, ”Enhancing the Automotive Software Test Environment Using Continuous Integration and Validation Pipeline,” in 2023 Innovations in Power and Advanced Computing Technologies (i-PACT), IEEE, 2023. doi:10.1109/IPACT58649.2023.10434454.<br/>
+[7] Docker Documentation. [Online]. Available: https://docs.docker.com<br/>
+[8] PyArmor Obfuscation Tool. [Online]. Available: https://pyarmor.readthedocs.io<br/>
+[9] GitHub Actions Documentation. [Online]. Available: https://docs.github.com/en/actions<br/>
+[10] Tailscale Mesh VPN. [Online]. Available: https://tailscale.com<br/>
+[11] Eclipse SDV Working Group. [Online]. Available: https://sdv.eclipse.org<br/>
