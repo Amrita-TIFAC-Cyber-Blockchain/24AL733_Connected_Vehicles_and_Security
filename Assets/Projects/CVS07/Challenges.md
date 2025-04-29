@@ -18,10 +18,10 @@ In **INET** and **Simu5G**, some packages were excluded because certain function
 The excluded packages are shown below:
 
 <p align="center">
-  <img src="Images/image22.jpg" width=400/>
+  <img src="images/omnetpp_ned_configuration_in_inet_4_5.jpg" width=400/>
 </p>
 <p align="center">
-  <img src="Images/image23.jpg" width="400"/>
+  <img src="images/omnetpp_ned_configuration_in_simu_5g.jpg" width="400"/>
 </p>
 
 ---
@@ -32,6 +32,6 @@ In **Veins**, the `veins_inet` subfolder was not considered during the build pro
 Because of this, some packages were excluded, as shown below:
 
 <p align="center">
-  <img src="Images/image24.jpg" width="400"/>
+  <img src="images/omnetpp_folder_not_selected_in_veins_package.jpg" width="400"/>
 </p>
 
