@@ -1,0 +1,43 @@
+/*@!Encoding:1252*/
+variables
+{
+  dword fileHandle;   
+  char buffer[256];   
+}
+
+on key 'w' 
+{
+  fileHandle = openFileWrite("C:/CAN_IDS/data.txt", 0);
+
+  if (fileHandle == 0) 
+  {
+    write("Error: Could not open the file for writing.");
+    return;
+  }
+
+  filePutString("Intrusion detected at timestamp 12345\n", fileHandle);
+  filePutString("System operating normally at timestamp 12346\n", fileHandle);
+  filePutString("Warning: Unusual activity at timestamp 12347\n", fileHandle);
+
+  fileClose(fileHandle);
+  write("Data writing completed.");
+}
+
+on key 'r' 
+{
+  fileHandle = openFileRead("C:/CAN_IDS/data.txt", 0);
+
+  if (fileHandle == 0) 
+  {
+    write("Error: Could not open the file for reading.");
+    return;
+  }
+
+  while(fileGetString(buffer, (buffer), fileHandle) != 0) 
+  {
+    write("Read: %s", buffer);
+  }
+
+  fileClose(fileHandle);
+  write("File reading completed.");
+}
