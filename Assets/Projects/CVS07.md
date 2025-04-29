@@ -122,7 +122,7 @@ Network file, route file and configuration file are the minimum required files f
 simulation in SUMO  
 
 <p align="center">
-  <img src="../Projects/CVS07/images/Core_Files_for_SUMO_Simulations.png" width=400/>
+  <img src="../Projects/CVS07/images/core_files_for_sumo_simulations.png" width=400/>
 </p>
 
 #### Installing /Building the SUMO software: 
