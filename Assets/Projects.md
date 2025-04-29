@@ -1,18 +1,17 @@
-# 24AL733 - Connected Vehicles and Security 
+# 24AL733 - Connected Vehicles and Security ![](https://img.shields.io/badge/-Completed-darkgreen)
 ![](https://img.shields.io/badge/PG-blue) ![](https://img.shields.io/badge/Subject-CVS-blue) <br/>
-![](https://img.shields.io/badge/Lecture-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) 
 
-## Topics Alloted
+## Mini-Project Details
 
-|Team Number | Roll Number | Topic | 
-|:----------:|:-----------:|:------|
-| [CVS#01](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS01.md) | CB.EN.P2AEL24003 | Implementation of CAN and CAN-FD Communication Protocols with Secure Communication Channel | 
-| [CVS#02](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS02.md) | CB.EN.P2AEL24006 | CAN and CAN-FD Vulnerability Analysis | 
-| [CVS#03](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS03.md) |  CB.EN.P2AEL24013 | IDS/IPS in Connected Vehicles | 
-| [CVS#04](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS04.md) | CB.EN.P2AEL24015 | OTA Update Strategies for SDV using CI/CD | 
-| [CVS#05](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS05.md) | CB.EN.P2AEL24017 | Authentication Mechanism and Workflow using CISCO Packet Tracer | 
-| [CVS#06](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS06.md) | CB.EN.P2AEL24019 | Threats in V2I Communications | 
-| [CVS#07](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS07.md) | CB.EN.P2AEL24020 | Role of 5G in Vehicle-to-Everything (V2X) Communication |
-| [CVS#08](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS08.md) | CB.EN.P2AEL24021 | Secure OTA Updates for Electric Vehicles (EVs) |
-| [CVS#09](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS09.md) | CB.EN.P2AEL24023 | DevOps/CICD with OTA | 
-| [CVS#10](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS10.md) | CB.EN.P2AEL24028 | Firmware Update OTA | 
+|   Project ID#   |   Roll Number   |    Name    |         Topic           | 
+|:---------------:|:---------------:|:-----------|:------------------------|
+| [CVS#01](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS01.md) | CB.EN.P2AEL24003 | [Amit Kumar Nandi](https://github.com/Amit1959) | [Implementation of CAN and CAN-FD Communication Protocols with Secure Communication Channel](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS01.md) | 
+| [CVS#02](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS02.md) | CB.EN.P2AEL24006 | [Boomika K T](https://github.com/Boomikakt09) | [CAN and CAN-FD Vulnerability Analysis](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS02.md) | 
+| [CVS#03](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS03.md) |  CB.EN.P2AEL24013 | [Mahalingpure Pratiksha Balmukund](https://github.com/PratikshaMahalingpure) | [IDS/IPS in Connected Vehicles](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS03.md) | 
+| [CVS#04](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS04.md) | CB.EN.P2AEL24015 | [Joshi Mohit Gajanand](https://github.com/MohitJoshi5811) | [OTA Update Strategies for SDV using CI/CD](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS04.md) | 
+| [CVS#05](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS05.md) | CB.EN.P2AEL24017 | [Pathan Zubair Khan](https://github.com/khanaelpg) | [Authentication Mechanism and Workflow using CISCO Packet Tracer](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS05.md) | 
+| [CVS#06](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS06.md) | CB.EN.P2AEL24019 | [Jadhav Sakshi Ganpat](https://github.com/SakshiJadhav0109) | [Threats in V2I Communications](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS06.md) | 
+| [CVS#07](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS07.md) | CB.EN.P2AEL24020 | [Shashank R](https://github.com/shashank96115)  | [Role of 5G in Vehicle-to-Everything (V2X) Communication](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS07.md) |
+| [CVS#08](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS08.md) | CB.EN.P2AEL24021 | [Shriram Rajaraman](https://github.com/shri-ram-iyer) | [Secure OTA Updates for Electric Vehicles (EVs)](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS08.md) |
+| [CVS#09](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS09.md) | CB.EN.P2AEL24023 | [Syed Ameenul](https://github.com/ameen-syed) | [DevOps/CICD with OTA](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS09.md) | 
+| [CVS#10](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS10.md) | CB.EN.P2AEL24028 | [Molleti Mani Shankar](https://github.com/Manishankarmolleti) | [Firmware Update OTA](https://github.com/Amrita-TIFAC-Cyber-Blockchain/24AL733_Connected_Vehicles_and_Security/blob/main/Assets/Projects/CVS10.md) | 
