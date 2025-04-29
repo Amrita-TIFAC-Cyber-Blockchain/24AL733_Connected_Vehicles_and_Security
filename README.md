@@ -2,9 +2,10 @@
     <img src="https://github.com/Amrita-TIFAC-Cyber-Blockchain/.github/blob/main/profile/img/AVV_CYS_Logo.png" alt ="Amrita TIFAC" width="700" />
 </p>
 
-# 24AL733 - Connected Vehicles and Security 
+# 24AL733 - Connected Vehicles and Security ![](https://img.shields.io/badge/-Completed-darkgreen) 
 ![](https://img.shields.io/badge/PG-blue) ![](https://img.shields.io/badge/Subject-CVS-blue) <br/>
-![](https://img.shields.io/badge/Lecture-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) <br/> ![](https://img.shields.io/badge/Students-10-gold)
+![](https://img.shields.io/badge/Lecture-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) <br/> ![](https://img.shields.io/badge/Students-10-gold) <br/> 
+![](https://img.shields.io/badge/Course_Outcome_Attainment-TBD-blue) ![](https://img.shields.io/badge/Average_Marks-TBD-blue) ![](https://img.shields.io/badge/Course_Feedback-TBD-blue) 
 
 #### Course Instructor:  Ramaguru R, Assistant Professor (Senior Grade), TIFAC-CORE in Cyber Security.
 
@@ -82,15 +83,15 @@
 | Missed Quiz | 02 - Apr - 2025 | 
 | Review - Final	| 04 - Apr - 2025 | 
 | End Semester Examination	| 17 - Apr - 2025 | 
-| Publication of Results |	May - 2025 | 
+| Publication of Results |	03 - May - 2025 | 
 
 ### SDG Achievement (through Projects)
 <p align="center">
-<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G7.png" width=200/>
-<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G9.png" width=200/>
-<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G11.png" width=200/>
-<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G12.png" width=200/>
-<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G13.png" width=200/>
-<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G16.png" width=200/>
-<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G17.png" width=200/>
+<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G7.png" width=150/>
+<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G9.png" width=150/>
+<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G11.png" width=150/>
+<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G12.png" width=150/>
+<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G13.png" width=150/>
+<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G16.png" width=150/>
+<img src="https://github.com/ramagururadhakrishnan/UN-SDG/blob/b42040bf1537ad6be89cd71d42050af13e93cc1c/Assets/G17.png" width=150/>
 </p>
