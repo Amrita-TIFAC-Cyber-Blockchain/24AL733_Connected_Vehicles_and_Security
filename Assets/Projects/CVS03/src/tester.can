@@ -1,0 +1,30 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  
+}
+
+void MainTest ()
+{
+  CTC_CallPyScript();
+}
+
+testcase CTC_CallPyScript()
+{
+  long res;
+  char absPath[256];
+  
+  getAbsFilePath("", absPath, elcount(absPath));
+  res=testWaitForSyscall(absPath, "py HelloWorld.py", 0, 5000);
+  if(res==1)
+    testStepPass("Pass.");
+  else
+    testStepFail("Fail.");
+
+}
+
