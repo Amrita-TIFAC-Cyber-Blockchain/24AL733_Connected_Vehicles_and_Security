@@ -1,6 +1,5 @@
 # 24AL733 - Connected Vehicles and Security 
 ![](https://img.shields.io/badge/PG-blue) ![](https://img.shields.io/badge/Subject-CVS-blue) <br/>
-![](https://img.shields.io/badge/Lecture-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) 
 
 ## Mini-Project Domains and Topics
 This section provides **domain-specific areas and corresponding research-based mini-project ideas** aligned with the syllabus. These projects are designed to provide both research depth and hands-on experience using simulation tools.
