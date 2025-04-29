@@ -1,0 +1,18 @@
+/*@!Encoding:1252*/
+variables {
+    message 0x256 Steering_Angle_MSG;  
+    timer sec_10;
+    int Angle_Deg = 15;
+}
+
+on key 'a' {
+    Steering_Angle_MSG.byte(0) = Angle_Deg & 0xFF;
+    Steering_Angle_MSG.byte(1) = (Angle_Deg >> 8) & 0xFF;
+    Steering_Angle_MSG.dlc = 2;
+
+    setTimer(sec_10, 10);
+}
+
+on timer sec_10 {
+    output(Steering_Angle_MSG);
+}

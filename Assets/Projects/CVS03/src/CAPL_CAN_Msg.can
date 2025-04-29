@@ -1,0 +1,48 @@
+/*@!Encoding:1252*/
+variables {
+    message 0x256 Steering_Angle_MSG; 
+    message 0x257 Speed_Sensor_MSG; 
+    timer sendTimer;
+    int receivedSteering;
+    int receivedSpeed;
+    int steeringAngle;  
+    int speed;   
+}
+on start{
+    Steering_Angle_MSG.id = 0x100;     
+    Steering_Angle_MSG.dlc = 2;   
+    Speed_Sensor_MSG.id = 0x101;      
+    Speed_Sensor_MSG.dlc = 2;
+    
+}
+on key 'a' {
+    setTimer(sendTimer, 100);
+}
+on timer sendTimer {
+    steeringAngle = 15;  
+    speed = 60;         
+
+    
+    Steering_Angle_MSG.byte(0) = steeringAngle & 0xFF;        
+    Steering_Angle_MSG.byte(1) = (steeringAngle >> 8) & 0xFF;  
+
+    Speed_Sensor_MSG.byte(0) = speed & 0xFF;                   
+    Speed_Sensor_MSG.byte(1) = (speed >> 8) & 0xFF;            
+
+  
+    output(Steering_Angle_MSG);
+    output(Speed_Sensor_MSG);
+
+   
+    setTimer(sendTimer, 100); 
+}
+
+on message 0x256 {
+    receivedSteering = this.byte(0) | (this.byte(1) << 8);
+    write("Received Steering Angle: %d degrees", receivedSteering);
+}
+
+on message 0x257 {
+    receivedSpeed = this.byte(0) | (this.byte(1) << 8);
+    write("Received Speed: %d km/h", receivedSpeed);
+}

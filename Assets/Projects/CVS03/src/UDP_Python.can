@@ -1,0 +1,50 @@
+/*@!Encoding:1252*/
+variables
+{
+    dword udpHandle;
+    char buffer[256];
+    int intrusionDetected = 0;
+}
+
+// Initialize UDP Socket to receive alerts from Python
+on start
+{
+    udpHandle = openUdpConnection("127.0.0.1", 5005);
+    if (udpHandle == 0) 
+    {
+        write("?? UDP Connection Failed!");
+    }
+    else
+    {
+        write("? UDP Connection Established: Waiting for Intrusion Alerts...");
+    }
+}
+
+// Listen for UDP Intrusion Alerts
+on timer 100ms
+{
+    if (udpHandle > 0) 
+    {
+        int bytesReceived = udpReceive(udpHandle, buffer, sizeof(buffer));
+        if (bytesReceived > 0) 
+        {
+            if (strstr(buffer, "INTRUSION DETECTED") != 0) 
+            {
+                write("?? Intrusion Alert Received! Sending CAN Warning...");
+                intrusionDetected = 1;
+            }
+        }
+    }
+}
+
+// Send Intrusion Alert Message on CAN Bus
+on message CAN_IDs_New
+{
+    if (intrusionDetected == 1) 
+    {
+        message Intrusion_Alert msg;
+        msg.Alert_Signal = 1;  // 1 = Intrusion Detected
+        output(msg);
+        intrusionDetected = 0;  // Reset alert flag
+    }
+}
