@@ -1,11 +1,10 @@
 # 24AL733 - Connected Vehicles and Security 
 ![](https://img.shields.io/badge/PG-blue) ![](https://img.shields.io/badge/Subject-CVS-blue) <br/>
-![](https://img.shields.io/badge/Lecture-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) 
 
 ## CVS#06 - Threats in V2I Communications
 ![](https://img.shields.io/badge/Student-Sakshi_Ganpat_Jadhav-gold) <br/> 
-![](https://img.shields.io/badge/SDG-TBD-darkgreen) <br/> 
-![](https://img.shields.io/badge/Reviewed-26_Apr-brown) 
+![](https://img.shields.io/badge/SDG-9-darkgreen) ![](https://img.shields.io/badge/SDG-11-darkgreen) ![](https://img.shields.io/badge/SDG-16-darkgreen) <br/> 
+![](https://img.shields.io/badge/Reviewed-26_Apr-brown) ![](https://img.shields.io/badge/Final_Review-26th_Apr_2025-darkgreen) <br/>
 
 ### Problem Statement
 Vehicle-to-Infrastructure communications and larger vehicular networks are facing an ever-increasing cybersecurity threat such as denial-of-service attacks, message tampering, and Man-In-the-middle which begin to erode system reliability and user privacy. Conventional cryptography is becoming more and more vulnerable to the rise of quantum computing, initiating the necessity of developing quantum-secure security frameworks. Quantum Key Distribution is capable of offering theoretically unbreakable encryption for secure key exchanges, while Quantum Machine Learning is designed to address real-time threat detection and anomaly identification in Intelligent Transportation Systems. Integration of QKD and QML into V2I communication poses challenges in terms of scalability, computational overhead, and real-time adaptability. This is where efficient quantum-secure architectures that guarantee a robust, privacy-preserving, and future-proof security solution for connected vehicle networks need to be created.
@@ -52,21 +51,21 @@ For example, in V2I communication, vehicles need to communicate with RSUs in rea
 
  ### Methodology 
  Methodology for Quantum-Based Attack Detection & Prevention in V2I Communication
-1.	System Architecture Design
-  •	Define the Vehicle-to-Infrastructure (V2I) communication model using Simulink & VEINS.
-  •	Identify the key components: 
-    o	Vehicle Communication Unit (VCU) (Simulated vehicle)
-    o	Roadside Unit (RSU) (Infrastructure communication node)
-    o	Attacker Model (Simulated cyberattacks)
-    o	Intrusion Detection System (IDS) (Quantum-based anomaly detection)
-    •	Integrate QKD for secure key exchange.
+1.	**System Architecture Design**
+  - Define the Vehicle-to-Infrastructure (V2I) communication model using Simulink & VEINS.
+  - Identify the key components: 
+    - Vehicle Communication Unit (VCU) (Simulated vehicle)
+    - Roadside Unit (RSU) (Infrastructure communication node)
+    - Attacker Model (Simulated cyberattacks)
+    - Intrusion Detection System (IDS) (Quantum-based anomaly detection)
+  - Integrate QKD for secure key exchange.
 
 2.	Attack Simulation in Simulink & VEINS
-  •	Simulate a V2I network with OMNeT++, SUMO, and VEINS.
-  •	Inject cyberattacks to test detection capabilities: 
-    o	Denial of Service (DoS) (Overloading RSU)
-    o	Man-in-the-Middle (MITM) (Intercepting vehicle messages)
-    •	Monitor packet transmission delays, abnormal behavior, unauthorized messages.
+ - Simulate a V2I network with OMNeT++, SUMO, and VEINS.
+ - Inject cyberattacks to test detection capabilities: 
+   - Denial of Service (DoS) (Overloading RSU)
+   - Man-in-the-Middle (MITM) (Intercepting vehicle messages)
+   - Monitor packet transmission delays, abnormal behavior, unauthorized messages.
   	
 ---
 
