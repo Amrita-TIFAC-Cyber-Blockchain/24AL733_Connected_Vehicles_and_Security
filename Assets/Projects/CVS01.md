@@ -1,11 +1,10 @@
 # 24AL733 - Connected Vehicles and Security 
 ![](https://img.shields.io/badge/PG-blue) ![](https://img.shields.io/badge/Subject-CVS-blue) <br/>
-![](https://img.shields.io/badge/Lecture-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) 
 
 ## CVS#01 - Implementation of CAN-FD Communication Protocols with Secure Communication Channel
 ![](https://img.shields.io/badge/Member-Amit_Kumar_Nandi-gold) <br/> 
 ![](https://img.shields.io/badge/SDG-TBD-darkgreen) <br/> 
-![](https://img.shields.io/badge/Reviewed-17th_Feb_2025-brown) 
+![](https://img.shields.io/badge/Reviewed-17th_Feb_2025-brown) ![](https://img.shields.io/badge/Final_Review-27th_Apr_2025-darkgreen) 
 
 ### Problem Statement
   In the Automotive domain, Controller Area Network (CAN) is one of the common and popular communication protocols, which is known for it’s simplicity and ease of implementation. It offers better data speed as compared to LIN. However, with the advancement of Automotive domain, more and more features are getting added, which requires the transfer of vast amounts of data collected through various sensors like RADAR, LIDAR, Ultrasonic Sensor, high-definition Cameras etc. To handle this enormous amount of data, a high-speed data transmission protocol is essential. The traditional CAN having data speed up to 1Mbps and payload of 8 bytes, is inefficient for handling the demands of modern ADAS applications. To accommodate this high-speed data, an improved version of classical CAN, known as Controller Area Network Flexible Data-Rate has been introduced which offers data speed of 10 Mbps with payload capacity of 64 bytes. 
@@ -13,8 +12,7 @@
 Moreover, as neither CAN nor CAN-FD protocol is inherently secured, they are becoming vulnerable to data breaches, tampering, and unauthorized access. 
   
   Therefore, there is a need to implement CAN-FD communication protocol and incorporate security measures like lightweight Encryption protocol and Hashing Algorithm. Also, it's necessary to evaluate the performance of CAN-FD over classical CAN in terms of latency and bandwidth.
-
- 
+  
 ---
 
 ### Literature Survey
@@ -47,8 +45,6 @@ Only if there are no observations of unusual behaviour and the digital signature
 4.	Integrate a simple Encryption Algorithm and Hashing Algorithm to secure the communication between different nodes or ECUs.
 5.	Provide a comparative study highlighting the strengths and limitations of both protocols in the selected use case. Also the advantages of securing the communication in real world scenario.
 
-
-
 ---
 
 ### Implementation Details
@@ -57,25 +53,24 @@ This project focusses on the implementation of a part of Remote Door Lock/Unlock
 
 The methodology involves several steps, including system design, database file (.dbc) creation, protocol implementation, performance analysis, etc. The following steps outline the detailed process required to design and implement the proposed system: 
 
-•**System Architecture:**  The System architecture is designed to establish a secure communication channel between TCU and BCM.  The operation starts when TCU triggers the request and after checking for the preconditions it sent the request to BCM, which executes the lock/unlock command.
+- **System Architecture:**  The System architecture is designed to establish a secure communication channel between TCU and BCM.  The operation starts when TCU triggers the request and after checking for the preconditions it sent the request to BCM, which executes the lock/unlock command.
 
-•**Creation of CAN Database File:** The CAN or CAN-FD protocol requires one .dbc (database file), which contains the details about arbitration IDs, data payloads, signal mappings, decoding mechanisms etc. This .dbc file can be created by using CANDB Editor, which then needs to be imported into the CANoE simulation tool.
+- **Creation of CAN Database File:** The CAN or CAN-FD protocol requires one .dbc (database file), which contains the details about arbitration IDs, data payloads, signal mappings, decoding mechanisms etc. This .dbc file can be created by using CANDB Editor, which then needs to be imported into the CANoE simulation tool.
 
-•**CAN and CAN-FD Implementation:** The implementation of CAN and CAN-FD communication models includes designing communication nodes in the CANoE simulation tool. Where one node (i.e. TCU) is configured to send the Lock, Unlock request and other node i.e. BCM is configured to receive those requests and execute that. 
+- **CAN and CAN-FD Implementation:** The implementation of CAN and CAN-FD communication models includes designing communication nodes in the CANoE simulation tool. Where one node (i.e. TCU) is configured to send the Lock, Unlock request and other node i.e. BCM is configured to receive those requests and execute that. 
 
-•**CAPL Scripting:** The behaviour of the TCU and BCM during simulation will be defined through CAPL scripting.  This script manages sending or receiving messages with the correct arbitration ID, payload and Control bits. 
+- **CAPL Scripting:** The behaviour of the TCU and BCM during simulation will be defined through CAPL scripting.  This script manages sending or receiving messages with the correct arbitration ID, payload and Control bits. 
 
-•**Performance Analysis:** Once the communication between TCU and BCM is established using both CAN and CAN-FD protocols, a comparative study of both protocols will be performed. The CAPL scripting supported by CANoE, will be used to write code that will be used to measure the delay and latency of the messages. 
+- **Performance Analysis:** Once the communication between TCU and BCM is established using both CAN and CAN-FD protocols, a comparative study of both protocols will be performed. The CAPL scripting supported by CANoE, will be used to write code that will be used to measure the delay and latency of the messages. 
 
-•**Security Integration:** To ensure the confidentiality of data, basic Encryption protocol such as XOR encryption or RC4 encryption will be implemented, considering the computational resources in mind. Some external libraries need to be imported as CAPL does not natively support any encryption algorithm. 
+- **Security Integration:** To ensure the confidentiality of data, basic Encryption protocol such as XOR encryption or RC4 encryption will be implemented, considering the computational resources in mind. Some external libraries need to be imported as CAPL does not natively support any encryption algorithm. 
 
  To ensure integrity, different hashing algorithms such as MD5, SHA-256 can be incorporated. This hashing algorithm enhances the security, but at the same time it needs a lot of computational power, essentially needing high-end processor. 
- Keeping all these into consideration, some basic function or logical operation (like XOR operation, OR operation) can also be performed to generate the Hash value as an alternative in this project. 
+Keeping all these into consideration, some basic function or logical operation (like XOR operation, OR operation) can also be performed to generate the Hash value as an alternative in this project. 
  After that, the calculated Hash value will be appended to the original message before transmission. Similarly, at the receiving end, the Hash value will be calculated again, and if both the values match, then the integrity is proved, and it ensures data has not been tampered with in between. 
  And if the values do not match, the receiver discards the message to prevent unauthorized access. 
  
-•**Response from the BCM:** After verifying the confidentiality and integrity of the message, the BCM will check for the ‘DoorStatus’ and execute the request from the TCU (essentially from Mobile App). If the vehicle is successfully unlocked, the notification will be sent back to the TCU and the use case ends here.
-
+- **Response from the BCM:** After verifying the confidentiality and integrity of the message, the BCM will check for the ‘DoorStatus’ and execute the request from the TCU (essentially from Mobile App). If the vehicle is successfully unlocked, the notification will be sent back to the TCU and the use case ends here.
 
 ---
 
@@ -85,14 +80,12 @@ The methodology involves several steps, including system design, database file (
 
 This project aligns with the following Sustainable Development Goals:
 
-• SDG 9: Industry, Innovation, and Infrastructure : Enhances automotive communication protocols by implementing CAN-FD, which improves data transmission speed and efficiency. 
+- **SDG 9 - Industry, Innovation, and Infrastructure:** Enhances automotive communication protocols by implementing CAN-FD, which improves data transmission speed and efficiency. 
 		Strengthening vehicle cybersecurity by integrating encryption and authentication mechanisms, ensuring safe and secure communication between electronic control units (ECUs). 
 
-• SDG 11: Sustainable Cities and Communities: Supporting intelligent and connected transportation by ensuring fast and secure data transmission, which is essential for smart city initiatives. Also, contributing to reliable and secure mobility solutions, which are key components of future urban transportation networks.
+- **SDG 11 - Sustainable Cities and Communities:** Supporting intelligent and connected transportation by ensuring fast and secure data transmission, which is essential for smart city initiatives. Also, contributing to reliable and secure mobility solutions, which are key components of future urban transportation networks.
 
-• SDG 13: Climate Action: Using CAN-FD instead of classical CAN increases the actual useful data-to-transmitted data ratio (efficiency), allowing larger amounts of data to be sent with less overhead. Since more data is transmitted per message frame, the number of frames needed for communication is reduced, leading to lower power consumption in electronic control units (ECUs), which helps to minimize energy usage in vehicle networks.
-
-
+- **SDG 13 - Climate Action:** Using CAN-FD instead of classical CAN increases the actual useful data-to-transmitted data ratio (efficiency), allowing larger amounts of data to be sent with less overhead. Since more data is transmitted per message frame, the number of frames needed for communication is reduced, leading to lower power consumption in electronic control units (ECUs), which helps to minimize energy usage in vehicle networks.
 
 ---
 
