@@ -1,11 +1,10 @@
 # 24AL733 - Connected Vehicles and Security 
 ![](https://img.shields.io/badge/PG-blue) ![](https://img.shields.io/badge/Subject-CVS-blue) <br/>
-![](https://img.shields.io/badge/Lecture-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) 
 
 ## CVS#08 - Secure OTA Updates for Electric Vehicles (EVs)
 ![](https://img.shields.io/badge/Member-Shriram_Rajaraman-gold) <br/> 
-![](https://img.shields.io/badge/SDG-TBD-darkgreen) <br/> 
-![](https://img.shields.io/badge/Reviewed-14th_Feb_2025-brown) 
+![](https://img.shields.io/badge/SDG-7-darkgreen) ![](https://img.shields.io/badge/SDG-9-darkgreen) ![](https://img.shields.io/badge/SDG-11-darkgreen) ![](https://img.shields.io/badge/SDG-12-darkgreen)  <br/> 
+![](https://img.shields.io/badge/Reviewed-14th_Feb_2025-brown) ![](https://img.shields.io/badge/Final_Review-27th_Apr_2025-darkgreen) <br/>
 
 ### Problem Statement
 
@@ -41,7 +40,6 @@ Addressing to these problems is crucial for preserving vehicle safety, consumer 
 
 Research also points to delta updates (transmitting only changed portions of firmware) and modular architectures (splitting large software into smaller components) as some useful strategies to reduce bandwidth and battery consumption.
 
-
 ---
 
 ### Proposed Work
@@ -69,7 +67,6 @@ Use Simulink to model the entire OTA pipeline: from request and download to veri
 Simulate various scenarios (low SOC, network latency, partial update failures) to observe potential impacts on battery consumption and vehicle safety.
 
 By addressing both security and operational aspect of OTA updates, this approach aims to produce a decent solution that can be extended to large EV fleets.
-
 
 ---
 
@@ -108,7 +105,6 @@ Run simulations under various conditions (e.g. near-empty SOC, tampered firmware
 **(iv) Performance & Security Analysis**
 
 Evaluate how the system responds to replay attacks or unauthorized update attempts.
-
 
 ---
 
