@@ -6,8 +6,8 @@
 ## CVS#07 - Role of 5G in Vehicle-to-Everything (V2X) Communication
 
 ![](https://img.shields.io/badge/Member-Shashank_R-gold) <br/>
-![](https://img.shields.io/badge/SDG-TBD-darkgreen) <br/>
-![](https://img.shields.io/badge/Reviewed-17th_Feb_2025-brown)
+![](https://img.shields.io/badge/SDG-3-darkgreen) ![](https://img.shields.io/badge/SDG-9-darkgreen) ![](https://img.shields.io/badge/SDG-11-darkgreen) ![](https://img.shields.io/badge/SDG-13-darkgreen) ![](https://img.shields.io/badge/SDG-17-darkgreen)<br/>
+![](https://img.shields.io/badge/Reviewed-17th_Feb_2025-brown) ![](https://img.shields.io/badge/Final_Review-26th_Apr_2025-darkgreen) <br/>
 
 ### Problem Statement
 
@@ -126,7 +126,7 @@ simulation in SUMO
 </p>
 
 #### Installing /Building the SUMO software: 
-For Ubuntu: 
+**For Ubuntu:**
 1. First install the required Library required for SUMO installation: 
    sudo apt-get install git cmake python3 g++ libxerces-c-dev libfox-1.6-dev libgdal-dev libproj-dev libgl2ps-dev 
 
@@ -164,11 +164,11 @@ For Ubuntu:
    More description can be found at https://sumo.dlr.de/docs/Installing/Linux_Build.html 
 9. If you just want to use SUMO, with predefined setting then after installing libraries run this in the terminal 
 
-sudo add-apt-repository ppa:sumo/stable 
+```sudo add-apt-repository ppa:sumo/stable ```
 
-sudo apt-get update 
+```sudo apt-get update ```
 
-sudo apt-get install sumo sumo-tools sumo-doc
+```sudo apt-get install sumo sumo-tools sumo-doc```
 
 ####  Imported MAP of Amrita Vishwa Vidyapeetham
 
@@ -202,47 +202,56 @@ of the simulation area. Count parameter implies that how many vehicles are gener
 
 #### Installing OMNET++ 
 
-For Ubuntu: 
+**For Ubuntu:** 
 1. Before installing the OMNET++ install the required libraries by typing 
 
+   ```
    $ sudo apt-get update libosgearth-dev gnome-color-chooser nemiver 
 
-   $ sudo apt-get install build-essential gcc g++ bison flex perl \python python3 qt5-default libqt5opengl5-dev tcl-dev tk-dev \libxml2-dev zlib1g-dev default-jre doxygen graphviz libwebkitgtk-3.0-0 openscenegraph-plugin-osgearth openmpi-bin libopenmpi-dev libpcap-dev 
+   $ sudo apt-get install build-essential gcc g++ bison flex perl \python python3 qt5-default libqt5opengl5-dev tcl-dev tk-dev \libxml2-dev zlib1g-dev default-jre doxygen graphviz libwebkitgtk-3.0-0 openscenegraph-plugin-osgearth openmpi-bin libopenmpi-dev libpcap-dev
+   ```
+   
 2. Download the source file from https://omnetpp.org/download/, file named as omnetpp
 6.0.0-src-linux.tgz. 
 3. Copy the file to your preferred installation directory. 
-4. Go the copied archive location >open terminal > extract file by typing 
+4. Go the copied archive location >open terminal > extract file by typing
+   ```
    $ tar xvfz omnetpp-6.0.0-src-linux.tgz 
 
    $ cd omnetpp-6.0.0 
 
    $ . setenv  
-
+   ```
    (note  : space between . and .setenv) 
-5. For setting environment variable permanently open .bashrc  in your home directory
-
+6. For setting environment variable permanently open .bashrc  in your home directory
+   ```
    gedit ~/.bashrc 
-  
-6. Add the  bin path in the end of file and save it, for my system the command is like this 
-
+   ```
+7. Add the  bin path in the end of file and save it, for my system the command is like this 
+  ```
    export PATH=$PATH:/home/amit/Documents/Project/omnetpp
+  ```
 5.6.2-src-linux/omnetpp-6.0.0/bin 
-7. Now close the terminal and open again. 
-8. Go to extracted Omnet++ directory and type 
-
-   $ ./configure 
+8. Now close the terminal and open again. 
+9. Go to extracted Omnet++ directory and type 
+   ```
+   $ ./configure
+   ```
 <p align="center">
   <img src="../Projects/CVS07/images/omnetpp_install_env_configure_step.jpg" width=400/>
 </p>
 
+   ```
    $ make 
+   ```
 
 <p align="center">
   <img src="../Projects/CVS07/images/omnetpp_build_process_make_step.jpg" width=400/>
 </p>
 
+   ```
    $ omnetpp 
-   
+   ```  
 9. Test the installation and set the workspace. 
 10. Setting the workspace window will look like below, click launch.
 
